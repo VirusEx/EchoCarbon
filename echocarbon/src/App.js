@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>EchoCarbon</p>
+        <p class = "is-size-1">EchoCarbon</p>
         <div class="container is-widescreen">
-          <div class="notification is-primary">
+          <div class="notification is-success">
             Carbon Footprint Calculator
             <progress class="progress" value="60" max="100">60%</progress>
               <article class="message is-success">
