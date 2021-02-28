@@ -14,11 +14,11 @@ function App() {
             <progress class="progress" value="60" max="100">60%</progress>
               <article class="message is-success">
                 <div class="message-body">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                  Hello! Welcome to our Carbon footprint calculator. Please enter the following information about your vehicle.
                 </div>
               </article>
               <DropDown />
-              <input class="input is-success" type="text" placeholder="Type here!"></input>
+              {/* <input class="input is-success" type="text" placeholder="Type here!"></input> */}
           </div>
         </div>
       </header>
