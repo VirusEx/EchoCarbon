@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class DropDown extends React.Component {
+class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,6 +41,6 @@ class DropDown extends React.Component {
         </form>
       );
     }
-}
+} 
 
-export default DropDown;
+export default Calculator;

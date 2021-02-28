@@ -1,6 +1,7 @@
 import './App.css';
 import "bulma/css/bulma.css"
-import DropDown from './components/Calculator'
+import Login from './components/Login'
+import Calculator from './components/Calculator'
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
                   Hello! Welcome to our Carbon footprint calculator. Please enter the following information about your vehicle.
                 </div>
               </article>
-              <DropDown />
+              <Login />
+              <Calculator />
               {/* <input class="input is-success" type="text" placeholder="Type here!"></input> */}
           </div>
         </div>
