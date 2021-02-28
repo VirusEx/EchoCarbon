@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class DropDown extends React.Component {
     constructor(props) {
       super(props);
-      this.state = {value: 'DIESEL'};
+      this.state = {fuelType: 'DIESEL'};
   
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -14,7 +14,7 @@ class DropDown extends React.Component {
     }
   
     handleSubmit(event) {
-      alert('YOUR VEHICLE TYPE: ' + this.state.value);
+      alert('YOUR VEHICLE TYPE: ' + this.state.fuelType);
       event.preventDefault();
     }
 
@@ -23,7 +23,7 @@ class DropDown extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               Pick your type of vehicle:
-              <select value={this.state.value} onChange={this.handleChange}>
+              <select value={this.state.fuelType} onChange={this.handleChange}>
                 <option value="DIESEL">DIESEL</option>
                 <option value="PETROL">PETROL</option>
                 <option value="ELETRIC">ELETRIC</option>
