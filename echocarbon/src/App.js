@@ -2,12 +2,30 @@ import './App.css';
 import "bulma/css/bulma.css"
 import Login from './components/Login'
 import Calculator from './components/Calculator'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
+/* function App() {
+  return (
+    <div className="App">
+      
+    </div>
+  );
+} */
+
+export default withAuthenticator(App);
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <header>
+        <img src={logo} className="App-logo" alt="logo" />     
+        <h1>We now have Auth!</h1>
+      </header>
+      <AmplifySignOut />
         <p class = "is-size-1">EchoCarbon</p>
         <div class="container is-widescreen">
           <div class="notification is-success">
@@ -28,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+/* export default App; */
