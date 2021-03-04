@@ -1,0 +1,37 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-echocarbon-dev-03621-authRole",
+      "UnauthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon-dev-03621-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon-dev-03621-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-echocarbon-dev-03621-deployment",
+      "UnauthRoleName": "amplify-echocarbon-dev-03621-unauthRole",
+      "StackName": "amplify-echocarbon-dev-03621",
+      "StackId": "arn:aws:cloudformation:us-west-2:098084210029:stack/amplify-echocarbon-dev-03621/603c5500-7b32-11eb-8c7e-0a5dfebd7057",
+      "AmplifyAppId": "dscgwp4iq79a2"
+    }
+  },
+  "auth": {
+    "echocarbon": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-echocarbon-dev-03621-deployment/amplify-cfn-templates/auth/echocarbon-cloudformation-template.yml",
+        "logicalId": "authechocarbon"
+      },
+      "lastPushTimeStamp": "2021-03-03T02:19:49.853Z",
+      "output": {
+        "UserPoolId": "us-west-2_25tdB8ga2",
+        "AppClientIDWeb": "qagt95bdbvn47hkp6ilbaj0qk",
+        "AppClientID": "67503hm5in21a1a9k7jf0ok4i3",
+        "IdentityPoolId": "us-west-2:03e68606-6592-4b35-961a-06f446131e6a",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "echocarbon"
+      },
+      "lastPushDirHash": "zNOi/w+FjonGZlPl9HgivK/2xG8="
+    }
+  }
+}
