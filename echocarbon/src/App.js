@@ -2,8 +2,8 @@ import './App.css';
 import "bulma/css/bulma.css"
 import Login from './components/Login'
 import Calculator from './components/Calculator'
+import DataForm from './components/DataForm'
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
@@ -37,6 +37,7 @@ function App() {
               </article>
               <Login />
               <Calculator />
+              <DataForm />
               {/* <input class="input is-success" type="text" placeholder="Type here!"></input> */}
           </div>
         </div>
