@@ -22,7 +22,6 @@ function App() {
     <div className="App">
       <header className="App-header">
       <header>
-        <img src={logo} className="App-logo" alt="logo" />     
         <h1>We now have Auth!</h1>
       </header>
       <AmplifySignOut />
