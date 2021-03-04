@@ -1,6 +1,6 @@
 {
   "auth": {
-    "echocarbon": {
+    "echocarbondb849dac": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
