@@ -20,19 +20,52 @@ export default withAuthenticator(App);
 function App() {
   return (
     <div className="App">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+          <div class="title is-1 has-text-black">EchoCarbon</div>
+          </a>
+        </div>
+
+        <div class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">
+              Home
+            </a>
+
+            <a class="navbar-item">
+
+            </a>
+
+          </div>
+
+          <div class="navbar-end">
+          <div class="navbar-item">
+              <div class="box has-background-success">
+                    <header class="title is-7 has-text-green ">
+                      Authenticated.
+                    </header>
+              </div>
+            </div>
+            <div class="navbar-item">
+              <div class="buttons">
+                <AmplifySignOut />
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
       <header className="App-header">
-      <header>
-        <h1>We now have Auth!</h1>
-      </header>
-      <AmplifySignOut />
-        <p class = "is-size-1">EchoCarbon</p>
+
+      
+    
         <div class="container is-widescreen">
           <div class="notification is-success">
-            Carbon Footprint Calculator
+            <div class="title is-1">Carbon Footprint Calculator</div>
             {/* <progress class="progress" value="60" max="100">60%</progress> */}
               <article class="message is-success">
                 <div class="message-body">
-                  Hello! Welcome to our Carbon footprint calculator. Please enter the following information about your vehicle.
+                  Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
                 </div>
               </article>
               {/* <Login />
