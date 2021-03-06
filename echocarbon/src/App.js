@@ -29,14 +29,14 @@ function App() {
         <div class="container is-widescreen">
           <div class="notification is-success">
             Carbon Footprint Calculator
-            <progress class="progress" value="60" max="100">60%</progress>
+            {/* <progress class="progress" value="60" max="100">60%</progress> */}
               <article class="message is-success">
                 <div class="message-body">
                   Hello! Welcome to our Carbon footprint calculator. Please enter the following information about your vehicle.
                 </div>
               </article>
-              <Login />
-              <Calculator />
+              {/* <Login />
+              <Calculator /> */}
               <DataForm />
               {/* <input class="input is-success" type="text" placeholder="Type here!"></input> */}
           </div>
