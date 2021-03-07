@@ -5,7 +5,7 @@ class DataForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      mpg: 1,
+      mpg: 10,
       weeklyMiles: 0
     };
 
@@ -59,10 +59,9 @@ class DataForm extends React.Component {
           </div>
           <div>
             {
-            ((this.state.weeklyMiles/this.state.mpg) * 19.60) <= 19.60 ?
-              <div class="notification is-info"> Congrats! You don't drive that many miles per week. <br></br> You do not put a lot of pollution into the air. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> :
-              <div class="notification is-info"> Sorry, you are driving too many miles per week. <br></br> You put a lot of pollution into the air. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> }
-            
+            ((this.state.weeklyMiles/this.state.mpg) * 19.60) <= 200 ?
+              <div class="notification is-info"> Congrats! You pollute less than the average driver, nice. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> :
+              <div class="notification is-info"> Sorry. You pollute more than the average driver, nice. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> }
           </div>
         </div>
       </div>
