@@ -56,7 +56,6 @@ function App() {
         <div class="container is-widescreen">
           <div class="notification is-success">
             <div class="title is-1">Carbon Footprint Calculator</div>
-            {/* <progress class="progress" value="60" max="100">60%</progress> */}
               <article class="message is-success">
                 <div class="message-body">
                   Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
@@ -65,12 +64,9 @@ function App() {
               {/* <Login />
               <Calculator /> */}
               <DataForm />
-              {/* <input class="input is-success" type="text" placeholder="Type here!"></input> */}
           </div>
         </div>
       </header>
     </div>
   );
 }
-
-/* export default App; */
