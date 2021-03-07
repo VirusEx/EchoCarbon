@@ -33,13 +33,9 @@ function App() {
               Home
             </a>
 
-            <a class="navbar-item">
-
-            </a>
-
           </div>
 
-          <div class="navbar-end">
+        <div class="navbar-end">
           <div class="navbar-item">
               <div class="box has-background-success">
                     <header class="title is-7 has-text-green ">

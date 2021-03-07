@@ -36,6 +36,7 @@ class DataForm extends React.Component {
             <input class="column is-half has-text-centered" type="text" placeholder="Text input"
               name="weeklyMiles"
               type="number"
+              min="0"
               value={this.state.weeklyMiles}
               onChange={this.handleInputChange}
             />
@@ -57,6 +58,7 @@ class DataForm extends React.Component {
             <input class="column is-half has-text-centered" type="text" placeholder="Text input"
               name="mpg"
               type="number"
+              min="1"
               value={this.state.mpg}
               onChange={this.handleInputChange}
             />
