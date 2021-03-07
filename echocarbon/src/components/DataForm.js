@@ -28,16 +28,15 @@ class DataForm extends React.Component {
       <div>
         <div>
           <div class="columns is-centered">
-            <div class="box is-light label">Weekly miles:</div>
+            <div class="box is-light label">WEEKLY MILES:</div>
             <br></br>
           </div>
           <div class="columns is-centered">
             <input
-              class="column is-half has-text-centered"
-              type="text"
-              placeholder="Text input"
-              name="weeklyMiles"
               type="number"
+              class="column is-half has-text-centered"
+              placeholder="Weekly Miles"
+              name="weeklyMiles"
               min="0"
               value={this.state.weeklyMiles}
               onChange={this.handleInputChange} />
@@ -46,13 +45,14 @@ class DataForm extends React.Component {
           <br></br>
         
           <div class="columns is-centered">
-            <div class="box is-light label">Car MPG:</div>
+            <div class="box is-light label">CAR MPG:</div>
             <br></br>
           </div>
           <div class = "columns is-centered">
-            <input class="column is-half has-text-centered" type="text" placeholder="Text input"
-              name="mpg"
+            <input class="column is-half has-text-centered"
               type="number"
+              placeholder="Car MPG"
+              name="mpg"
               min="1"
               value={this.state.mpg}
               onChange={this.handleInputChange} />
@@ -60,8 +60,8 @@ class DataForm extends React.Component {
           <div>
             {
             ((this.state.weeklyMiles/this.state.mpg) * 19.60) <= 200 ?
-              <div class="notification is-info"> Congrats! You pollute less than the average driver, nice. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> :
-              <div class="notification is-info"> Sorry. You pollute more than the average driver, nice. <br></br>Pounds of CO2 released per week: {((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</div> }
+              <div class="notification is-info"> Congrats! You pollute less than the average driver, nice. <br></br>Pounds of CO2 released per week: <p class="is-family-code">{((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</p></div> :
+              <div class="notification is-info"> Sorry. You pollute more than the average driver, nice. <br></br>Pounds of CO2 released per week: <p class="is-family-code">{((this.state.weeklyMiles/this.state.mpg) * 19.60).toFixed(2)}</p></div> }
           </div>
         </div>
       </div>
