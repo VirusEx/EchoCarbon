@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <nav class="navbar" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
+          <a class="navbar-item" href="">
           <div class="title is-1 has-text-black">EchoCarbon</div>
           </a>
         </div>
