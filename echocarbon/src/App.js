@@ -32,6 +32,15 @@ function App() {
             <a class="navbar-item">
               Home
             </a>
+            <a class="navbar-item">
+              Calculators
+            </a>
+            <a class="navbar-item">
+              Contact
+            </a>
+            <a class="navbar-item">
+              About
+            </a>
 
           </div>
 
