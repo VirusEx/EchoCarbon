@@ -16,6 +16,7 @@
     "react-scripts": "4.0.3",
     "react-shortcut": "^2.0.9",
     "react-shortcuts": "^2.1.0",
+    "simply": "0.0.0",
     "typescript": "^4.2.2",
     "web-vitals": "^1.1.0"
   },
