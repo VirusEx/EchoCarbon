@@ -5,6 +5,7 @@ frontend:
         - npm ci
     build:
       commands: 
+        - cd echocarbon
         - npm run build
   artifacts:
     baseDirectory: build
