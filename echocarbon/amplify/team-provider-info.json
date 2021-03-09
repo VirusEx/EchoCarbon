@@ -12,12 +12,6 @@
       "AmplifyAppId": "dsqifp4yxhwar"
     },
     "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "dsqifp4yxhwar",
-          "type": "cicd"
-        }
-      },
       "auth": {
         "echocarbon205c072ba": {}
       }
