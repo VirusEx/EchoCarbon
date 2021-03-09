@@ -30,18 +30,20 @@ class EcoTier extends Component {
     if (numGasImperial > 200) {
       return (
         <div class="notification is-info"> 
-        {this.state.metricChoice ? <button onClick={ () => this.ToggleButton() }>METRIC</button> : <button onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
+        {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
                 
         <br></br>Sorry, you are driving too many miles per week. 
         <br></br> You put a lot of pollution into the air.
 
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week: 
+            <br></br>Kilograms of CO2 released per week:
+            <br></br>
             {numGasMetric.toFixed(2) }
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week: 
+            <br></br>Pounds of CO2 released per week:
+            <br></br>
             {numGasImperial.toFixed(2) }
         </div>}
         
@@ -53,17 +55,19 @@ class EcoTier extends Component {
       return (
         <div class="notification is-info"> 
         
-        {this.state.metricChoice ? <button onClick={ () => this.ToggleButton() }>METRIC</button> : <button onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
+        {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRIC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
 
         <br></br>You don't drive that many miles per week. 
         <br></br> You do not put a lot of pollution into the air. 
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week: 
+            <br></br>Kilograms of CO2 released per week:
+            <br></br>
             {numGasMetric.toFixed(2) }
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week: 
+            <br></br>Pounds of CO2 released per week:
+            <br></br>
             {numGasImperial.toFixed(2) }
         </div>}
         </div>
@@ -74,17 +78,19 @@ class EcoTier extends Component {
     {
       return (
         <div class="notification is-info"> 
-        {this.state.metricChoice ? <button onClick={ () => this.ToggleButton() }>METRIC</button> : <button onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
+        {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRIC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
                 
         <br></br>Congrats! You are Earth's best friend. 
         <br></br> You do not put a lot of pollution into the air. 
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week: 
+            <br></br>Kilograms of CO2 released per week:
+            <br></br>
             {numGasMetric.toFixed(2) }
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week: 
+            <br></br>Pounds of CO2 released per week:
+            <br></br>
             {numGasImperial.toFixed(2) }
         </div>}
         </div>
@@ -127,7 +133,7 @@ class DataForm extends React.Component {
       <div>
         <div>
           <div class="columns is-centered">
-            <div class="box is-light label">Weekly miles:</div>
+            <div class="box is-light label has-background-warning">Weekly miles:</div>
             <br></br>
           </div>
           <div class="columns is-centered">
@@ -145,7 +151,7 @@ class DataForm extends React.Component {
           <br></br>
         
           <div class="columns is-centered">
-            <div class="box is-light label">Car MPG:</div>
+            <div class="box is-light label has-background-warning">Car MPG:</div>
             <br></br>
           </div>
           <div class = "columns is-centered">
