@@ -3,6 +3,7 @@ import "bulma/css/bulma.css"
 import Login from './components/Login'
 import Calculator from './components/Calculator'
 import DataForm from './components/DataForm'
+import Emailer from './components/Emailer'
 import React from 'react';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
@@ -64,8 +65,11 @@ function App() {
               {/* <Login />
               <Calculator /> */}
               <DataForm />
+              {/* <Emailer /> */}
           </div>
         </div>
+
+
       </header>
     </div>
   );
