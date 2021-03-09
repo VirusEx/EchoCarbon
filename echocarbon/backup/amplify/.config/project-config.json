@@ -1,5 +1,5 @@
 {
-  "projectName": "echocarbon2",
+  "projectName": "echocarbon",
   "version": "3.0",
   "frontend": "javascript",
   "javascript": {
@@ -8,7 +8,8 @@
       "SourceDir": "src",
       "DistributionDir": "build",
       "BuildCommand": "npm run build",
-      "StartCommand": "npm start"
+      "StartCommand": "npm start",
+      "ServerlessContainers": false
     }
   },
   "providers": [

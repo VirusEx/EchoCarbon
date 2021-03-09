@@ -1,6 +1,14 @@
 {
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "type": "cicd",
+      "lastPushTimeStamp": "2021-03-09T04:27:21.296Z"
+    }
+  },
+  "function": {},
   "auth": {
-    "echocarbondb849dac": {
+    "echocarbon205c072ba": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

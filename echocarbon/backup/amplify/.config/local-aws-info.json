@@ -1,0 +1,10 @@
+{
+  "dev": {
+    "configLevel": "amplifyAdmin"
+  },
+  "echocarbon": {
+    "configLevel": "project",
+    "useProfile": true,
+    "profileName": "default"
+  }
+}

@@ -1,20 +1,25 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-echocarbon-dev-03621-authRole",
-      "UnauthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon-dev-03621-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon-dev-03621-authRole",
+      "AuthRoleName": "amplify-echocarbon2-dev-201938-authRole",
+      "UnauthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon2-dev-201938-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::098084210029:role/amplify-echocarbon2-dev-201938-authRole",
       "Region": "us-west-2",
-      "DeploymentBucketName": "amplify-echocarbon-dev-03621-deployment",
-      "UnauthRoleName": "amplify-echocarbon-dev-03621-unauthRole",
-      "StackName": "amplify-echocarbon-dev-03621",
-      "StackId": "arn:aws:cloudformation:us-west-2:098084210029:stack/amplify-echocarbon-dev-03621/603c5500-7b32-11eb-8c7e-0a5dfebd7057",
-      "AmplifyAppId": "dscgwp4iq79a2"
+      "DeploymentBucketName": "amplify-echocarbon2-dev-201938-deployment",
+      "UnauthRoleName": "amplify-echocarbon2-dev-201938-unauthRole",
+      "StackName": "amplify-echocarbon2-dev-201938",
+      "StackId": "arn:aws:cloudformation:us-west-2:098084210029:stack/amplify-echocarbon2-dev-201938/ab2a0060-808e-11eb-942a-069d68851b1b",
+      "AmplifyAppId": "dsqifp4yxhwar"
     },
     "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dsqifp4yxhwar",
+          "type": "cicd"
+        }
+      },
       "auth": {
-        "echocarbonb726157a": {},
-        "echocarbondb849dac": {}
+        "echocarbon205c072ba": {}
       }
     }
   }
