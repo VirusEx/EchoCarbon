@@ -64,8 +64,15 @@ function App() {
               </article>
               {/* <Login />
               <Calculator /> */}
-              <DataForm />
-              {/* <Emailer /> */}
+              <div>
+                <DataForm />
+              </div>
+              <br></br>
+              <br></br>
+              <div>
+              
+                {/* <Emailer /> */}
+              </div>
           </div>
         </div>
 

@@ -19,22 +19,75 @@ export default function Emailer() {
 
     return(
         <div>
-            <form onSubmit={sendEmail}>
-                <div class="columns is-centered">
-                    <div>
-                        <input type = "text" className="form-control column is-half has-text-centered" placeholder="Name" name="name"/>
-                        <br></br>
-                        <input type = "email" className="form-control column is-half has-text-centered" placeholder="Email Address" name="email"/>
-                        <br></br>
-                        <input type = "text" className="form-control column is-half has-text-centered" placeholder="Subject" name="subject"/>
-                        <br></br>
-                        <textarea className="form-control column is-half has-text-centered" id="" cols="30" rows="8" placeholder="Your message" name = "message"></textarea>
-                        <br></br>
-                        <input type = "submit" className="btn btn-info column is-half has-text-centered" value="Send message"/>
-                        <br></br>
-                    </div>
+            <br></br>
+            <br></br>
+            <div class="title is-1">Carbon Footprint Goal Setter</div>
+            <div class="message-body">
+                  Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
+            </div>
+        <form onSubmit={sendEmail}>
+
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input className="form-control has-text-centered input" type="text" name="name" placeholder="Name" />
                 </div>
-            </form>
-        </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input className="form-control has-text-centered input" type="email" placeholder="Email Address" defaultValue="" name="email"/>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Carbon Emission Goal</label>
+                <div class="control">
+                    {/* <textarea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name = "message" defaultValue=" My personal goal on my Carbon Emission score is: 
+                      Personal Notes: 
+                      ..."></textarea> */}
+                      <input className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Goal" name = "message" defaultValue=""></input>
+                </div>
+            </div>
+
+            <div class="control">
+  <input class="input" type="text" placeholder="Disabled input" name = "carbon" value={"The amount of carbon released based off your weekly driving habits is " + localStorage.getItem("carbonNumber") + "."}/>
+</div>
+
+
+            <div class="field">
+                <div class="control">
+                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Send message"/>
+                </div>
+            </div>
+
+
+            {}
+
+
+
+                {/* <div>
+                    <input type = "text" className="form-control has-text-centered" placeholder="Name" name="name"/>
+                    <br></br>
+                    <input type = "email" className="form-control has-text-centered" placeholder="Email Address" name="email"/>
+                    <br></br>
+                    <textarea className="form-control has-text-centered" id="" cols="30" rows="8" placeholder="Your message" name = "message" defaultValue="
+                      My personal goal on my Carbon Emission score is: 
+                      Personal Notes: 
+                      ...
+                    "></textarea>
+                    <br></br>
+                    <input type = "submit" className="btn btn-info has-text-centered" value="Send message"/>
+                </div> */}
+        </form>
+
+    </div>
     )
 }
