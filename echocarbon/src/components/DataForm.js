@@ -17,9 +17,8 @@ import Emailer from './Emailer'
 //         e.target.reset()
 //     }
 
-var data1
+var data
 
-var data2
 
 class EcoTier extends Component {
 
@@ -48,8 +47,7 @@ class EcoTier extends Component {
     var numGasImperial = ((this.props.numMILES / this.props.numMPG) * 19.60);
     var numGasMetric = ((this.props.numMILES / this.props.numMPG) * 8.89);
 
-    data1 = numGasImperial
-    data2 = numGasMetric
+
 
     
     
@@ -155,7 +153,7 @@ class DataForm extends React.Component {
   }
 
   handleInputChange(event) {
-    localStorage.setItem("carbonNumber", data1);
+    localStorage.setItem("carbonNumber", data);
 
     console.log(localStorage.getItem("carbonNumber"))
 

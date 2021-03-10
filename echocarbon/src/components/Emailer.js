@@ -20,11 +20,7 @@ export default function Emailer() {
     return(
         <div>
             <br></br>
-            <br></br>
-            <div class="title is-1">Carbon Footprint Goal Setter</div>
-            <div class="message-body">
-                  Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
-            </div>
+            <div class="title is-1">Carbon Footprint Report & Goal Setter</div>
         <form onSubmit={sendEmail}>
 
             <div class="field">
@@ -53,18 +49,27 @@ export default function Emailer() {
                     {/* <textarea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name = "message" defaultValue=" My personal goal on my Carbon Emission score is: 
                       Personal Notes: 
                       ..."></textarea> */}
-                      <input className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Goal" name = "message" defaultValue=""></input>
+                      <input className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Goal" name = "message" defaultValue="My carbon emission goal is "></input>
                 </div>
             </div>
 
-            <div class="control">
-  <input class="input" type="text" placeholder="Disabled input" name = "carbon" value={"The amount of carbon released based off your weekly driving habits is " + localStorage.getItem("carbonNumber") + "."}/>
-</div>
+            <div class="field">
+                <label class="label">Carbon Emission Report</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Disabled input" name = "carbon" value={"The amount of carbon released based off your weekly driving habits is " + localStorage.getItem("carbonNumber") + "."}/>
+                </div>
+            </div>
+
+            
 
 
+
+
+
+            <br></br>
             <div class="field">
                 <div class="control">
-                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Send message"/>
+                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Create goal"/>
                 </div>
             </div>
 

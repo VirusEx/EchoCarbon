@@ -25,7 +25,7 @@ function App() {
             <a class="navbar-item">
               Home
             </a>
-            <a class="navbar-item">
+            {/* <a class="navbar-item">
               Calculators
             </a>
             <a class="navbar-item">
@@ -33,7 +33,7 @@ function App() {
             </a>
             <a class="navbar-item">
               About
-            </a>
+            </a> */}
           </div>
 
           <div class="navbar-end">
@@ -66,10 +66,6 @@ function App() {
               <Calculator /> */}
               <div>
                 <DataForm />
-              </div>
-              <br></br>
-              <br></br>
-              <div>
               
                 {/* <Emailer /> */}
               </div>
