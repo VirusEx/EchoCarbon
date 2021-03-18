@@ -7,6 +7,12 @@ import Emailer from './components/Emailer'
 import React from 'react';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import Amplify, { Interactions } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import { AmplifyChatbot } from '@aws-amplify/ui-react';
+import { ChatBot, AmplifyTheme } from 'aws-amplify-react';
+
+Amplify.configure(awsconfig);
 
 export default withAuthenticator(App);
 
@@ -66,11 +72,17 @@ function App() {
               <Calculator /> */}
               <div>
                 <DataForm />
+                <AmplifyChatbot
+    botName="BookTrip_dev"
+    botTitle="My ChatBot"
+    welcomeMessage="Hello, how can I help you?"
+  />
               
                 {/* <Emailer /> */}
               </div>
           </div>
         </div>
+        
 
 
       </header>
