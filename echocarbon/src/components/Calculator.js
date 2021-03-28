@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
+import DataForm from './DataForm'
+import EcoBot from './EcoBot'
+
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      vehicleType: 'DIESEL',
-      weeklyMiles: ''
+      
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -13,32 +15,40 @@ class Calculator extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({vehicleType: event.target.vehicleType});
+    //this.setState({vehicleType: event.target.vehicleType});
   }
 
   handleSubmit(event) {
-    alert('YOUR VEHICLE TYPE: ' + this.state.vehicleType);
+    //alert('YOUR VEHICLE TYPE: ' + this.state.vehicleType);
     event.preventDefault();
   }
 
   render() {
       return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Pick your type of vehicle:
-            <select vehicleType={this.state.vehicleType} onChange={this.handleChange}>
-              <option vehicleType="DIESEL">DIESEL</option>
-              <option vehicleType="PETROL">PETROL</option>
-              <option vehicleType="ELETRIC">ELETRIC</option>
-            </select>
-          </label>
-          <br></br>
-          <label>
-            Miles driven weekly:
-            <input type="text" monday={this.state.monday} onChange={this.handleChange} />
-          </label>
-          <input type="submit" vehicleType="Submit" />
-        </form>
+        <header className="App-header">
+        <div class="container is-widescreen">
+          <div class="notification is-success">
+            <div class="title is-1">Carbon Footprint Calculator</div>
+              <article class="message is-success">
+                <div class="message-body">
+                  Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
+                </div>
+              </article>
+              {/* <Login />
+              <Calculator /> */}
+              <div>
+                <DataForm /> 
+                <EcoBot/>
+                
+              
+                {/* <Emailer /> */}
+              </div>
+          </div>
+        </div>
+        
+
+
+      </header>
       );
     }
 } 
