@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import "bulma/css/bulma.css"
 import emailjs from "emailjs-com"
-
 export default function Emailer() {
 
     

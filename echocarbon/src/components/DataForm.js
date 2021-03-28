@@ -1,29 +1,11 @@
 import React, { Component } from 'react'
 import "bulma/css/bulma.css"
-import emailjs from "emailjs-com"
 import Emailer from './Emailer'
 
 
-
-// function sendEmail(e){
-//         e.preventDefault();
-
-//         emailjs.sendForm('service_2wmow6p', 'template_9xqgkef', e.target, 'user_JHjDXIrrcTdmB9Wa4RcC4')
-//           .then((result) => {
-//               console.log(result.text);
-//           }, (error) => {
-//               console.log(error.text);
-//           });
-//         e.target.reset()
-//     }
-
 var data
 
-
 class EcoTier extends Component {
-
-  
-
   constructor(props){
         super(props);
         this.state={
@@ -47,9 +29,6 @@ class EcoTier extends Component {
     var numGasImperial = ((this.props.numMILES / this.props.numMPG) * 19.60);
     var numGasMetric = ((this.props.numMILES / this.props.numMPG) * 8.89);
 
-
-
-    
     
     //console.log("THE NUMBER OF GAS IS:" + numGas);
     if (numGasImperial > 200) {
@@ -138,8 +117,6 @@ class EcoTier extends Component {
 
 
 
-
-
 class DataForm extends React.Component {
   constructor(props) {
     super(props);
@@ -172,8 +149,6 @@ class DataForm extends React.Component {
   //this.state.weeklyMiles/this.state.mpg) * 19.60) <= 200
 
 
-
-  
 
   render() {
     return (
