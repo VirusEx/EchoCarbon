@@ -20,3 +20,14 @@ npm i react-router-dom
 npm i emailjs-com
 
 npm start
+
+
+# Possible Commands
+
+npm i aws-cli
+
+npm i aws-exports
+
+npm i @aws-amplify/ui-react
+
+npm install -g awsmobile-cli@latest
