@@ -17,4 +17,6 @@ npm i bulma
 
 npm i react-router-dom
 
-npm i emailjs-com --save
+npm i emailjs-com
+
+npm start
