@@ -24,7 +24,7 @@ class House extends React.Component {
   render() {
       return (
         <div className="">
-          <div class="box">
+          <div class="box is-static">
             House Carbon Footprint Calculator
           </div>
         </div>

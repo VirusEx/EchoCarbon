@@ -23,12 +23,11 @@ function App() {
   return (
     <Router>
       <NavBar/>
-      <div className="App">
+      <div className="App" id="body">
         
-        <div class="has-background-dark is-halfheight">
+        {/* <div style={ margin: 0; padding: 0; height: 100%; width: 100%; background-color: green;  }> */}
+        <div>
           <LinkButtons/>
-
-          
           <Switch>
             <Route path="/calculator" component={Calculator}/>
             <Route path="/chatbot" component={EcoBot}/>
@@ -37,7 +36,6 @@ function App() {
             <Route path="/meme" component={Meme}/>
             <Route path="/questions" component={Questions}/>
           </Switch>
-          
           {/* <Calculator/> */}
         
         </div>

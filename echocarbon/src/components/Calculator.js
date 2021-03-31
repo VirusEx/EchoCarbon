@@ -25,7 +25,7 @@ class Calculator extends React.Component {
 
   render() {
       return (
-        <header className="App-header">
+        <header className="">
         <div class="container is-widescreen">
           <div class="notification is-success">
             <div class="title is-1">Carbon Footprint Calculator</div>
@@ -38,7 +38,7 @@ class Calculator extends React.Component {
               <Calculator /> */}
               <div>
                 <DataForm /> 
-                <EcoBot/>
+                {/* <EcoBot/> */}
                 
               
                 {/* <Emailer /> */}

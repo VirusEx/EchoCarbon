@@ -23,29 +23,27 @@ class LinkButtons extends React.Component {
 
   render() {
       return (
-        <div className="">
-          
-          {/* <div class="columns"> */}
+         <div class="buttons has-addons">
             <div class="column">
-              <Link to='/calculator'><button class="button is-large is-fullwidth is-success">Carbon Footprint Calculator</button></Link>
+              <Link to='/calculator'><button class="button is-medium is-fullwidth is-success is-outlined">Carbon Footprint Calculator</button></Link>
             </div>
             <div class="column">
-              <Link to='/house'><button class="button is-large is-fullwidth is-success">House Carbon Footprint Calculator</button></Link>
+              <Link to='/house'><button class="button is-medium is-fullwidth is-success is-outlined">House Carbon Footprint Calculator</button></Link>
             </div>
             <div class="column">
-              <Link to='/map'><button class="button is-large is-fullwidth is-success">Environmentally Friendly Countries Map</button></Link>
+              <Link to='/map'><button class="button is-medium is-fullwidth is-success is-outlined">Environmentally Friendly Countries Map</button></Link>
             </div>
             <div class="column">
-            <Link to='/chatbot'><button class="button is-large is-fullwidth is-success">Chatbot</button></Link>
+            <Link to='/chatbot'><button class="button is-medium is-fullwidth is-success is-outlined">Chatbot</button></Link>
             </div>
             <div class="column">
-            <Link to='/meme'><button class="button is-large is-fullwidth is-success">Meme Generator</button></Link>
+            <Link to='/meme'><button class="button is-medium is-fullwidth is-success is-outlined">Meme Generator</button></Link>
             </div>
             <div class="column">
-            <Link to='/questions'><button class="button is-large is-fullwidth is-success">Ask Questions</button></Link>
+            <Link to='/questions'><button class="button is-medium is-fullwidth is-success is-outlined">Ask Questions</button></Link>
             </div>
           </div>
-        // </div>
+
       );
     }
 } 
