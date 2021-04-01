@@ -7,7 +7,7 @@ export default function Emailer() {
     function sendEmail(e){
         e.preventDefault();
 
-        emailjs.sendForm('service_2wmow6p', 'template_9xqgkef', e.target, 'user_JHjDXIrrcTdmB9Wa4RcC4')
+        emailjs.sendForm('service_gy667yu', 'template_ohyobpd', e.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
           .then((result) => {
               console.log(result.text);
           }, (error) => {
@@ -17,7 +17,7 @@ export default function Emailer() {
     }
 
     return(
-        <div>
+    <div>
             <br></br>
             <div class="title is-1">Carbon Footprint Report & Goal Setter</div>
         <form onSubmit={sendEmail}>
