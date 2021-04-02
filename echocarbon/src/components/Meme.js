@@ -1,72 +1,79 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
 
-class Meme extends React.Component {
-  state = {
-    loading: false,
-    topText: "",
-    bottomText: "",
-    allMemeImgs: [],
-    randomImg: "http://i.imgflip.com/1bij.jpg"
-  };
-  componentDidMount() {
-    this.setState({
-      loading: true
-    });
-
-    fetch("https://api.imgflip.com/get_memes")
-      .then(response => response.json())
-      .then(content =>
-        this.setState({
-          allMemeImgs: content.data.memes,
-          loading: false
-        })
-      );
+class Meme extends Component {
+  constructor() {
+    super();
+    this.state = {
+      font_size: "22",
+      topText: "",
+      bottomText: "",
+      randomImg: "http://i.imgflip.com/1bij.jpg",
+      allMemeImgs: []
+    };
   }
-
   handleChange = event => {
     const { name, value } = event.target;
-
-    this.setState({
-      [name]: value
-    });
+    this.setState({ [name]: value });
   };
-  handleSubmit = event => {
-    event.preventDefault();
-    const { allMemeImgs } = this.state;
-    const rand =
-      allMemeImgs[Math.floor(Math.random() * allMemeImgs.length)].url;
-    this.setState({
-      randomImg: rand
-    });
+  handleClick = () => {
+    let randomNumber = Math.floor(
+      Math.random() * this.state.allMemeImgs.length
+    );
+    this.setState({ randomImg: this.state.allMemeImgs[randomNumber].url });
   };
-
+  increaseFont = () => {};
+  componentDidMount() {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(data => data.json())
+      .then(response => {
+        const { memes } = response.data;
+        this.setState({ allMemeImgs: memes });
+      });
+  }
   render() {
+    console.log(this.state.font_size);
     return (
       <div>
-        <form className="meme-form" onSubmit={this.handleSubmit}>
+        <div className="meme-form">
           <input
-            placeholder="Enter Text"
             type="text"
-            value={this.state.topText}
             name="topText"
+            placeholder="top text"
             onChange={this.handleChange}
+            value={this.state.topText}
           />
+          <br />
           <input
-            placeholder="Enter Text"
             type="text"
-            value={this.state.bottomText}
             name="bottomText"
+            placeholder="bottom text"
             onChange={this.handleChange}
+            value={this.state.bottomText}
           />
-          <button>Generate</button>
-        </form>
-
-        <br />
+          <br />
+          <input
+            type="number"
+            name="font_size"
+            placeholder="font size"
+            onChange={this.handleChange}
+            value={this.state.font_size}
+          />
+          <button onClick={this.handleClick}>Generate!</button>
+        </div>
         <div className="meme">
-          <img src={this.state.randomImg} alt="meme" />
-          <h2 className="top">{this.state.topText}</h2>
-          <h2 className="bottom">{this.state.bottomText}</h2>
+          <h2
+            style={{ fontSize: Number(this.state.font_size) }}
+            className="top"
+          >
+            {this.state.topText}
+          </h2>
+          <img src={this.state.randomImg} alt="" />
+          <h2
+            style={{ fontSize: Number(this.state.font_size) }}
+            className="bottom"
+          >
+            {this.state.bottomText}
+          </h2>
         </div>
       </div>
     );
