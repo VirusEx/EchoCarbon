@@ -19,8 +19,11 @@ npm i react-router-dom
 
 npm i emailjs-com
 
-npm start
+npm i react-svg-worldmap
 
+npm i react-rangeslider
+
+npm start
 
 # Possible Commands
 
@@ -30,4 +33,4 @@ npm i aws-exports
 
 npm i @aws-amplify/ui-react
 
-npm install -g awsmobile-cli@latest
+npm i -g awsmobile-cli@latest
