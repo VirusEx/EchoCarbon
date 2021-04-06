@@ -1,24 +1,22 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
+import Slider from 'react-rangeslider';
+
 class House extends React.Component {
+
+
   constructor(props) {
-    super(props);
+    super();
     this.state = {
-      
+      speed: 4
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
-    //this.setState({vehicleType: event.target.vehicleType});
-  }
-
-  handleSubmit(event) {
-    //alert('YOUR VEHICLE TYPE: ' + this.state.vehicleType);
-    event.preventDefault();
+  componentDidMount() {
+    this.setState({
+      speed: 3
+    });
   }
 
   render() {
@@ -27,9 +25,25 @@ class House extends React.Component {
           <div class="box is-static">
             House Carbon Footprint Calculator
           </div>
+          <h2>{this.state.speed}</h2>
+
+        <Slider
+          min={1}
+          max={100}
+          step={1}
+          value={this.state.speed}
+          onChange={(newVal) => {
+            console.log('Sliding..');
+            this.setState({
+              speed: newVal
+            });
+            }
+          }
+        />
         </div>
       );
     }
 } 
+
 
 export default House;

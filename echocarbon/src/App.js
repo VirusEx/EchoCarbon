@@ -27,6 +27,7 @@ function App() {
         
         {/* <div style={ margin: 0; padding: 0; height: 100%; width: 100%; background-color: green;  }> */}
         <div>
+        <script src="https://unpkg.com/react-rangeslider/umd/rangeslider.min.js"></script>
           <LinkButtons/>
           <Switch>
             <Route path="/calculator" component={Calculator}/>
@@ -36,6 +37,7 @@ function App() {
             <Route path="/meme" component={Meme}/>
             <Route path="/questions" component={Questions}/>
           </Switch>
+
           {/* <Calculator/> */}
         
         </div>
