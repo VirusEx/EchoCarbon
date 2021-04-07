@@ -24,6 +24,11 @@ class Meme extends Component {
       Math.random() * this.state.allMemeImgs.length
     );
     this.setState({ randomImg: this.state.allMemeImgs[randomNumber].url });
+
+    const min = 0;
+    const max = 6; 
+    const rand = min + Math.random() * (max - min);
+    this.state.randomNumber = Math.floor(rand);
   };
   
   increaseFont = () => {};
@@ -71,7 +76,7 @@ class Meme extends Component {
             {this.state.topText}
           </h2>
           {/* <img src={this.state.randomImg} alt="" /> */}
-          <img src={images[Math.floor(Math.random() * images.length)]} />
+          <img src={images[this.state.randomNumber]} />
           <h2
             style={{ fontSize: Number(this.state.font_size) }}
             className="bottom"
