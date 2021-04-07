@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+import images from './images'
+
+
 class Meme extends Component {
   constructor() {
     super();
@@ -8,7 +11,8 @@ class Meme extends Component {
       topText: "",
       bottomText: "",
       randomImg: "http://i.imgflip.com/1bij.jpg",
-      allMemeImgs: []
+      allMemeImgs: [],
+      randomNumber: 0
     };
   }
   handleChange = event => {
@@ -21,6 +25,7 @@ class Meme extends Component {
     );
     this.setState({ randomImg: this.state.allMemeImgs[randomNumber].url });
   };
+  
   increaseFont = () => {};
   componentDidMount() {
     fetch("https://api.imgflip.com/get_memes")
@@ -42,7 +47,6 @@ class Meme extends Component {
             onChange={this.handleChange}
             value={this.state.topText}
           />
-          <br />
           <input
             type="text"
             name="bottomText"
@@ -50,7 +54,6 @@ class Meme extends Component {
             onChange={this.handleChange}
             value={this.state.bottomText}
           />
-          <br />
           <input
             type="number"
             name="font_size"
@@ -67,7 +70,8 @@ class Meme extends Component {
           >
             {this.state.topText}
           </h2>
-          <img src={this.state.randomImg} alt="" />
+          {/* <img src={this.state.randomImg} alt="" /> */}
+          <img src={images[Math.floor(Math.random() * images.length)]} />
           <h2
             style={{ fontSize: Number(this.state.font_size) }}
             className="bottom"
