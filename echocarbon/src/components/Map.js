@@ -46,7 +46,7 @@ class Map extends React.Component {
           <div class="box">
           <h1 class="title is-1">Map</h1>
           </div>
-          <WorldMap color="green" title="Top 10 Populous Countries" value-suffix="people" size="xxl" data={this.data} />
+          <WorldMap color="green" title="Environmentally Friendly Countries" value-suffix="people" size="xxl" data={this.data} />
         </div>
       );
     }
