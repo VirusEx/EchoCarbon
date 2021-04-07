@@ -28,11 +28,9 @@ class House extends React.Component {
       return (
         <div className="">
           <div class="box is-static">
-            House Carbon Footprint Calculator
+          <h1 class="title is-1">House Carbon Footprint Calculator</h1>
           </div>
 
-
-          
           <div class="columns is-centered">
             <div class="column is-half">
               <h2>Water: {this.state.water}</h2>

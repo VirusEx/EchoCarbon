@@ -38,11 +38,10 @@ class Questions extends React.Component {
       return (
         <div className="">
           <div class="box">
-            Questions
+          <h1 class="title is-1">Ask Questions</h1>
           </div>
           <div>
             <br></br>
-            <div class="title is-1">Ask Questions</div>
         <form onSubmit={this.sendEmail}>
 
             <div class="field">

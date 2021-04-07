@@ -37,7 +37,7 @@ class LinkButtons extends React.Component {
               <Link to='/chatbot'><button class="button is-medium is-fullwidth is-success is-outlined">Chatbot</button></Link>
             </div>
             <div class="column">
-              <Link to='/meme'><button class="button is-medium is-fullwidth is-success is-outlined">Meme Generator</button></Link>
+              <Link to='/meme'><button class="button is-medium is-fullwidth is-success is-outlined">Environmental Meme Generator</button></Link>
             </div>
             <div class="column">
               <Link to='/questions'><button class="button is-medium is-fullwidth is-success is-outlined">Ask Questions</button></Link>

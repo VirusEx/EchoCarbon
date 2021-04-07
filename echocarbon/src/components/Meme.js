@@ -45,28 +45,49 @@ class Meme extends Component {
     return (
       <div>
         <div className="meme-form">
-          <input
-            type="text"
-            name="topText"
-            placeholder="top text"
-            onChange={this.handleChange}
-            value={this.state.topText}
-          />
-          <input
-            type="text"
-            name="bottomText"
-            placeholder="bottom text"
-            onChange={this.handleChange}
-            value={this.state.bottomText}
-          />
-          <input
-            type="number"
-            name="font_size"
-            placeholder="font size"
-            onChange={this.handleChange}
-            value={this.state.font_size}
-          />
-          <button onClick={this.handleClick}>Generate!</button>
+          <h1 class="title is-1">Environmental Meme Generator</h1>
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <input
+                class="input"
+                type="text"
+                name="topText"
+                placeholder="top text"
+                onChange={this.handleChange}
+                value={this.state.topText}
+              />
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <input
+                class="input"
+                type="text"
+                name="bottomText"
+                placeholder="bottom text"
+                onChange={this.handleChange}
+                value={this.state.bottomText}
+              />
+            </div>
+          </div>
+
+          <div class="columns is-centered">
+            <div class="column is-one-third">
+              <input
+                class="input"
+                type="number"
+                name="font_size"
+                placeholder="font size"
+                onChange={this.handleChange}
+                value={this.state.font_size}
+                min="0"
+                max="100"
+              />
+            </div>
+          </div>
+          
+          <div class="button is-warning" onClick={this.handleClick}>Generate!</div>
         </div>
         <div className="meme">
           <h2
