@@ -18,8 +18,8 @@ class House extends React.Component {
   componentDidMount() {
     this.setState({
       water: 50,
-      gas: 10,
-      electricity: 10,
+      gas: 25,
+      electricity: 70,
       solar: true
     });
   }
@@ -106,7 +106,7 @@ class House extends React.Component {
 
           <div class="columns is-centered">
             <div class="column is-half">
-              <h2>Household Score: {this.state.electricity}</h2>
+            <h1 class="title is-3">Household Score: {this.state.water * this.state.gas * this.state.electricity/100}</h1>
             </div>
           </div>
 
