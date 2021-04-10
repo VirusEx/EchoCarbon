@@ -38,7 +38,7 @@ class Questions extends React.Component {
       return (
         <div className="">
           <div class="box">
-          <h1 class="title is-1">Ask Questions</h1>
+          <h1 class="title is-1">Customer Feedback & Questions</h1>
           </div>
           <div>
             <br></br>
@@ -78,7 +78,7 @@ class Questions extends React.Component {
             <br></br>
             <div class="field">
                 <div class="control">
-                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Create goal"/>
+                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Submit Ticket"/>
                 </div>
             </div>
 
