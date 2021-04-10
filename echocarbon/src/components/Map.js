@@ -5,16 +5,28 @@ import { Link } from 'react-router-dom';
 class Map extends React.Component {
   data =
     [
-      { country: "cn", value: 1389618778 }, // china
-      { country: "in", value: 1311559204 }, // india
-      { country: "us", value: 331883986 },  // united states
-      { country: "id", value: 264935824 },  // indonesia
-      { country: "pk", value: 210797836 },  // pakistan
-      { country: "br", value: 210301591 },  // brazil
-      { country: "ng", value: 208679114 },  // nigeria
-      { country: "bd", value: 161062905 },  // bangladesh
-      { country: "ru", value: 141944641 },  // russia
-      { country: "mx", value: 127318112 }   // mexico
+      { country: "cn", value: 28 }, // china
+      { country: "in", value: 7 }, // india
+      { country: "us", value: 15 },  // united states
+      { country: "ru", value: 5 },  // russia
+      { country: "jp", value: 3 },  // Japan
+      { country: "de", value: 2 },  // Germany
+      { country: "ir", value: 2 },  // Iran
+      { country: "kr", value: 2 },  // South Korea
+      { country: "sa", value: 2 },  // Saudi Arabia
+      { country: "id", value: 2 },  // indonesia
+      { country: "ca", value: 2 },  // Canada
+      { country: "mx", value: 1 },  // Mexico
+      { country: "za", value: 1 },  // South Africa
+      { country: "br", value: 1 },  // Brazil
+      { country: "tr", value: 1 },  // Turkey
+      { country: "au", value: 1 },  // Alstralia
+      { country: "gb", value: 1 },  // United Kingdom
+      { country: "pl", value: 1 }  // poland
+      // { country: "pk", value: 210797836 },  // pakistan
+      // { country: "br", value: 210301591 },  // brazil
+      // { country: "ng", value: 208679114 },  // nigeria
+      // { country: "bd", value: 161062905 },  // banglades
     ];
 
   constructor(props) {
@@ -46,7 +58,7 @@ class Map extends React.Component {
           <div class="box">
           <h1 class="title is-1">Map</h1>
           </div>
-          <WorldMap color="green" title="Environmentally Friendly Countries" value-suffix="people" size="xxl" data={this.data} />
+          <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />
         </div>
       );
     }

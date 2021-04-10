@@ -20,6 +20,7 @@
     "react-input-slider": "^6.0.0",
     "react-modal": "^3.12.1",
     "react-rangeslider": "^2.2.0",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-shortcut": "^2.0.9",
     "react-shortcuts": "^2.1.0",
