@@ -40,7 +40,7 @@ class LinkButtons extends React.Component {
               <Link to='/meme'><button class="button is-medium is-fullwidth is-success is-outlined">Environmental Meme Generator</button></Link>
             </div>
             <div class="column">
-              <Link to='/questions'><button class="button is-medium is-fullwidth is-success is-outlined">Customer Feedback & Questions</button></Link>
+              <Link to='/questions'><button class="button is-medium is-fullwidth is-success is-outlined">Customer Ticker Creator</button></Link>
             </div>
           </div>
 
