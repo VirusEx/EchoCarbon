@@ -23,16 +23,16 @@ class NavBar extends React.Component {
 
   render() {
       return (
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="">
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+        <div className="navbar-brand">
+          <a className="navbar-item" href="">
             <div class="title is-1 has-text-black">EchoCarbon</div>
           </a>
         </div>
 
-        <div class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item">
+        <div className="navbar-menu">
+          <div className="navbar-start">
+            <a className="navbar-item">
               Home
             </a>
             {/* <a class="navbar-item">
@@ -46,16 +46,16 @@ class NavBar extends React.Component {
             </a> */}
           </div>
 
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="box has-background-success">
-                    <header class="title is-7 has-text-green ">
+          <div className="navbar-end">
+            <div className="navbar-item">
+              <div className="box has-background-success">
+                    <header className="title is-7 has-text-green ">
                       Authenticated.
                     </header>
               </div>
             </div>
-            <div class="navbar-item">
-              <div class="buttons">
+            <div className="navbar-item">
+              <div className="buttons">
                 <AmplifySignOut />
               </div>
             </div>

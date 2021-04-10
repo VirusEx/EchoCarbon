@@ -38,7 +38,7 @@ class Questions extends React.Component {
       return (
         <div className="">
           <div class="box">
-          <h1 class="title is-1">Customer Feedback & Questions</h1>
+          <h1 class="title is-1">Customer Ticker Creator</h1>
           </div>
           <div>
             <br></br>
@@ -67,7 +67,7 @@ class Questions extends React.Component {
             <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                      <input className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Goal" name = "message" defaultValue="My carbon emission goal is "></input>
+                      <textarea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name = "message" defaultValue=""></textarea>
                 </div>
             </div>
 
