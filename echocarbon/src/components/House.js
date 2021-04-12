@@ -36,7 +36,7 @@ class House extends React.Component {
     console.log("solar" + this.state.solar);
     this.setState((currentState) => ({
       solar: !currentState.solar, 
-      electricity: 1
+      electricity: 0
     }));
   }
 
@@ -68,7 +68,7 @@ class House extends React.Component {
             <div class="column is-half">
               <h2>Water: {this.state.water} gallons per month</h2>
               <Slider
-                    min={1}
+                    min={0}
                     max={5000}
                     step={1}
                     value={this.state.water}
@@ -88,7 +88,7 @@ class House extends React.Component {
             <div class="column is-half">
               <h2>Natural Gas: {this.state.gas} cubic ft per month</h2>
               <Slider
-                    min={1}
+                    min={0}
                     max={10000}
                     step={1}
                     value={this.state.gas}
@@ -108,7 +108,7 @@ class House extends React.Component {
             <div class="column is-half">
               <h2>Electricity: {this.state.electricity} kWh per month</h2>
               <Slider
-                    min={1}
+                    min={0}
                     max={2000}
                     step={1}
                     value={this.state.electricity}

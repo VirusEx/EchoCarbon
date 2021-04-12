@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { WorldMap } from "react-svg-worldmap"
 import { Link } from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class Map extends React.Component {
   data =
@@ -29,15 +30,76 @@ class Map extends React.Component {
       // { country: "bd", value: 161062905 },  // banglades
     ];
 
+    data2 =
+    [
+      { country: "cn", value: 0 }, // china
+      { country: "in", value: 0 }, // india
+      { country: "us", value: 0 },  // united states
+      { country: "ru", value: 0 },  // russia
+      { country: "jp", value: 0 },  // Japan
+      { country: "de", value: 0 },  // Germany
+      { country: "ir", value: 0 },  // Iran
+      { country: "kr", value: 0 },  // South Korea
+      { country: "sa", value: 0 },  // Saudi Arabia
+      { country: "id", value: 0 },  // indonesia
+      { country: "ca", value: 0 },  // Canada
+      { country: "mx", value: 0 },  // Mexico
+      { country: "za", value: 0 },  // South Africa
+      { country: "br", value: 0 },  // Brazil
+      { country: "au", value: 0 },  // Alstralia
+      { country: "gb", value: 0 },  // United Kingdom
+      { country: "pl", value: 0 }  // poland
+      // { country: "pk", value: 210797836 },  // pakistan
+      // { country: "br", value: 210301591 },  // brazil
+      // { country: "ng", value: 208679114 },  // nigeria
+      // { country: "bd", value: 161062905 },  // banglades
+    ];
+
+    data3 =
+    [
+      { country: "cn", value: 500 }, // china
+      { country: "in", value: 500 }, // india
+      { country: "us", value: 500 },  // united states
+      { country: "ru", value: 500 },  // russia
+      { country: "jp", value: 500 },  // Japan
+      { country: "de", value: 500 },  // Germany
+      { country: "ir", value: 500 },  // Iran
+      { country: "kr", value: 500 },  // South Korea
+      { country: "sa", value: 500 },  // Saudi Arabia
+      { country: "id", value: 500 },  // indonesia
+      { country: "ca", value: 500 },  // Canada
+      { country: "mx", value: 500 },  // Mexico
+      { country: "za", value: 500 },  // South Africa
+      { country: "br", value: 500 },  // Brazil
+      { country: "tr", value: 500 },  // Turkey
+      { country: "au", value: 500 },  // Alstralia
+      { country: "gb", value: 500 },  // United Kingdom
+      { country: "pl", value: 500 }  // poland
+      // { country: "pk", value: 210797836 },  // pakistan
+      // { country: "br", value: 210301591 },  // brazil
+      // { country: "ng", value: 208679114 },  // nigeria
+      // { country: "bd", value: 161062905 },  // banglades
+    ];
+
+    dataMain = [];
+
   constructor(props) {
     super(props);
     this.state = {
+      mapChoice: 1
       
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
+  // componentDidMount() {
+  //   this.setState({
+      
+  //   });
+  // }
+  
 
   handleChange(event) {
     //this.setState({vehicleType: event.target.vehicleType});
@@ -48,7 +110,30 @@ class Map extends React.Component {
     event.preventDefault();
   }
 
-  
+  changeMap(num)
+  {
+      console.log(num)
+      console.log(10)
+
+      if(num == 1)
+        this.mapChoice = 1
+      else if (num == 2)
+        this.mapChoice = 2
+      else if (num == 3)
+        this.mapChoice = 3
+      console.log("mapChoice: " + this.mapChoice)
+  }
+
+  chooseMap()
+  {
+    if(this.state.mapChoice == 1)
+      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />;
+    else if (this.state.mapChoice == 2)
+      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data2} />;
+    else if (this.state.mapChoice == 3)
+      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data3} />;
+
+  }
 
   render() {
 
@@ -60,16 +145,30 @@ class Map extends React.Component {
           </div>
           <div class="buttons has-addons">
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning">Map #1</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 1})}>Map #1</button>
             </div>
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning">Map #2</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 2})}>Map #2</button>
             </div>
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning">Map #3</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 3})}>Map #3</button>
             </div>
           </div>
-          <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />
+          {/* {(this.mapChoice == 1)?
+          (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />):
+          ((this.mapChoice == 2)?
+           (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data2} />):
+           (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data3} />)
+          )} */}
+          
+          <div class="columns is-centered">
+            <div class="column is-three-quarters">
+            {this.state.mapChoice == 1 && <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />}
+            {this.state.mapChoice == 2 && <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data2} />}
+            {this.state.mapChoice == 3 && <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data3} />}
+            </div>
+          </div>
+      
         </div>
       );
     }
