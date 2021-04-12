@@ -53,7 +53,7 @@ class Map extends React.Component {
   render() {
 
       return (
-        
+
         <div className="">
           <div class="box">
             <h1 class="title is-1">Map</h1>
@@ -69,7 +69,11 @@ class Map extends React.Component {
               <button class="button is-medium is-fullwidth is-warning">Map #3</button>
             </div>
           </div>
-          <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />
+          <div class="columns is-centered">
+            <div class="column is-three-quarters">
+              <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />
+            </div>
+          </div>
         </div>
       );
     }
