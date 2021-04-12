@@ -27,12 +27,12 @@ class Questions extends React.Component {
     localStorage.setItem("tMTime", Date());
     event.preventDefault();
 
-    // emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 
     //   emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
     //   .then((result) => {
@@ -104,10 +104,10 @@ class Questions extends React.Component {
                 console.log(localStorage.getItem("tM") + "TEST")
               }
               <br></br> */}
-              Previous Message:
+              
               <br></br>
               {
-                localStorage.getItem("tM") === "" ? "" : <div>{localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} </div>
+                localStorage.getItem("tM") === "" ? "" : <div>Previous Message: <br></br> {localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} </div>
               }
           </form>
         </div>
