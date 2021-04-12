@@ -90,13 +90,13 @@ class Questions extends React.Component {
                 </div>
               </div>
 
-              <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button>
-              <br></br>
+              
+              {/* <br></br>
               Current Message:
               <br></br>
               {
                 this.state.ticketMessage
-              }
+              } */}
               <br></br>
               {/* Sent on:
               <br></br>
@@ -104,10 +104,10 @@ class Questions extends React.Component {
                 console.log(localStorage.getItem("tM") + "TEST")
               }
               <br></br> */}
-              Previous Message:
+              
               <br></br>
               {
-                localStorage.getItem("tM") === "" ? "" : <div>{localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} </div>
+                localStorage.getItem("tM") === "" ? "" : <div>Previous Message: <br></br> {localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} <br></br> <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button></div>
               }
           </form>
         </div>
