@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { WorldMap } from "react-svg-worldmap"
 import { Link } from 'react-router-dom';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 class Map extends React.Component {
   data =
@@ -110,30 +109,6 @@ class Map extends React.Component {
     event.preventDefault();
   }
 
-  changeMap(num)
-  {
-      console.log(num)
-      console.log(10)
-
-      if(num == 1)
-        this.mapChoice = 1
-      else if (num == 2)
-        this.mapChoice = 2
-      else if (num == 3)
-        this.mapChoice = 3
-      console.log("mapChoice: " + this.mapChoice)
-  }
-
-  chooseMap()
-  {
-    if(this.state.mapChoice == 1)
-      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />;
-    else if (this.state.mapChoice == 2)
-      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data2} />;
-    else if (this.state.mapChoice == 3)
-      return <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data3} />;
-
-  }
 
   render() {
 
@@ -154,13 +129,7 @@ class Map extends React.Component {
               <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 3})}>Map #3</button>
             </div>
           </div>
-          {/* {(this.mapChoice == 1)?
-          (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />):
-          ((this.mapChoice == 2)?
-           (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data2} />):
-           (<WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data3} />)
-          )} */}
-          
+
           <div class="columns is-centered">
             <div class="column is-three-quarters">
             {this.state.mapChoice == 1 && <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />}

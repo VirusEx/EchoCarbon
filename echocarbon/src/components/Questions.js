@@ -19,31 +19,39 @@ class Questions extends React.Component {
     // console.log("Change: " + event.target.value);
   }
 
+
   handleSubmit(event) {
     // alert('A name was submitted: ' + this.state.value);
     console.log("Submit: " + this.state.ticketMessage);
-    var prevMess = "Sent on: " + Date().toLocaleString() + + '\n' + "Message: " + this.state.ticketMessage;
-    localStorage.setItem("tM", prevMess);
+    localStorage.setItem("tM", this.state.ticketMessage);
+    localStorage.setItem("tMTime", Date());
     event.preventDefault();
 
-    emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    // emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
 
-      emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      event.target.reset()
+    //   emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
+    //   event.target.reset()
   }
 
   clearTicketMessage(event) {
-    localStorage.clear();
+    // localStorage.clear();
+    localStorage.setItem("tM", "");
+    localStorage.setItem("tMTime", "");
+    // localStorage.clear();
+  }
+
+  refreshPage() {
+    window.location.reload();
   }
 
   render() {
@@ -72,17 +80,17 @@ class Questions extends React.Component {
               <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                      <textArea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name="message" value={this.state.ticketMessage} onChange={this.handleChange} defaultValue=""></textArea>
+                      <textArea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name="message" value={this.state.ticketMessage}  onChange={this.handleChange} onSubmit={this.handleSubmit} defaultValue=""></textArea>
                 </div>
               </div>
 
               <div class="field">
                 <div class="control">
-                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Submit Ticket"/>
+                    <input type = "submit" className="btn btn-info has-text-centered button is-link" value="Submit Ticket" onClick={this.refreshPage}/>
                 </div>
               </div>
 
-              <button class="button is-danger" onSubmit={this.clearTicketMessage}>Delete Previous Message</button>
+              <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button>
               <br></br>
               Current Message:
               <br></br>
@@ -90,10 +98,16 @@ class Questions extends React.Component {
                 this.state.ticketMessage
               }
               <br></br>
+              {/* Sent on:
+              <br></br>
+              {
+                console.log(localStorage.getItem("tM") + "TEST")
+              }
+              <br></br> */}
               Previous Message:
               <br></br>
               {
-                localStorage.getItem("tM")
+                localStorage.getItem("tM") === "" ? "" : <div>{localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} </div>
               }
           </form>
         </div>
