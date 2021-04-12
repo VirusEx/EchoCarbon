@@ -56,7 +56,18 @@ class Map extends React.Component {
         
         <div className="">
           <div class="box">
-          <h1 class="title is-1">Map</h1>
+            <h1 class="title is-1">Map</h1>
+          </div>
+          <div class="buttons has-addons">
+            <div class="column">
+              <button class="button is-medium is-fullwidth is-warning">Map #1</button>
+            </div>
+            <div class="column">
+              <button class="button is-medium is-fullwidth is-warning">Map #2</button>
+            </div>
+            <div class="column">
+              <button class="button is-medium is-fullwidth is-warning">Map #3</button>
+            </div>
           </div>
           <WorldMap color="red" title="The Percentage of Each Country's Carbon Emissions in the World (> 1%)" valueSuffix="%" size="xxl" data={this.data} />
         </div>
