@@ -27,12 +27,12 @@ class Questions extends React.Component {
     localStorage.setItem("tMTime", Date());
     event.preventDefault();
 
-    emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    // emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
 
     //   emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
     //   .then((result) => {
@@ -90,13 +90,13 @@ class Questions extends React.Component {
                 </div>
               </div>
 
-              <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button>
-              <br></br>
+              
+              {/* <br></br>
               Current Message:
               <br></br>
               {
                 this.state.ticketMessage
-              }
+              } */}
               <br></br>
               {/* Sent on:
               <br></br>
@@ -107,7 +107,7 @@ class Questions extends React.Component {
               
               <br></br>
               {
-                localStorage.getItem("tM") === "" ? "" : <div>Previous Message: <br></br> {localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} </div>
+                localStorage.getItem("tM") === "" ? "" : <div>Previous Message: <br></br> {localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} <br></br> <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button></div>
               }
           </form>
         </div>
