@@ -107,7 +107,17 @@ class Questions extends React.Component {
               
               <br></br>
               {
-                localStorage.getItem("tM") === "" ? "" : <div>Previous Message: <br></br> {localStorage.getItem("tM")} <br></br>Sent at: {localStorage.getItem("tMTime")} <br></br> <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button></div>
+                localStorage.getItem("tM") === "" ? "" :
+                <div class="box">
+                  <label class="label">Previous Message:</label>
+                  
+                  <blockquote>{localStorage.getItem("tM")}</blockquote>
+                  <br></br>
+                  <label class="label">Sent at:</label>
+                  {localStorage.getItem("tMTime")}
+                  <br></br>
+                  <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button>
+                </div>
               }
           </form>
         </div>
