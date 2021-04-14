@@ -27,20 +27,20 @@ class Questions extends React.Component {
     localStorage.setItem("tMTime", Date());
     event.preventDefault();
 
-    // emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 
-    //   emailjs.sendForm('service_gy667yu', 'template_ohyobpd', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
-    //   event.target.reset()
+      emailjs.sendForm('service_gy667yu', 'template_ohyobpd', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      event.target.reset()
 
       
   }
