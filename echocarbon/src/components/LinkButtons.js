@@ -31,7 +31,7 @@ class LinkButtons extends React.Component {
               <Link to='/house'><button class="button is-medium is-fullwidth is-success is-outlined">House Carbon Footprint Calculator</button></Link>
             </div>
             <div class="column">
-              <Link to='/map'><button class="button is-medium is-fullwidth is-success is-outlined">Environmentally Friendly Countries Map</button></Link>
+              <Link to='/map'><button class="button is-medium is-fullwidth is-success is-outlined">Worldwide Map View</button></Link>
             </div>
             <div class="column">
               <Link to='/chatbot'><button class="button is-medium is-fullwidth is-success is-outlined">Chatbot</button></Link>
