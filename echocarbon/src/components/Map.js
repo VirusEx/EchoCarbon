@@ -146,7 +146,7 @@ class Map extends React.Component {
                 this.state.mapChoice === 3 &&
                 <div>
                   <span class="tag is-large is-white">Top 20 Environmental Performance Index Countries as of 2020</span>
-                  <WorldMap color="green" title="" valueSuffix="%" size="xxl" data={this.data3} />
+                  <WorldMap color="green" title="" valueSuffix="EPI" size="xxl" data={this.data3} />
                 </div>
               }
             </div>
