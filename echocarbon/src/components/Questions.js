@@ -42,7 +42,7 @@ class Questions extends React.Component {
     //   });
     //   event.target.reset()
 
-      window.alert("Your ticket was successfully submitted!")
+      
   }
 
   clearTicketMessage(event) {
@@ -68,21 +68,21 @@ class Questions extends React.Component {
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control">
-                    <input className="form-control has-text-centered input" type="text" name="name" placeholder="Name" />
+                  <input className="form-control has-text-centered input" type="text" name="name" placeholder="Name" />
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                    <input className="form-control has-text-centered input" type="email" placeholder="Email Address" defaultValue="" name="email"/>
+                  <input className="form-control has-text-centered input" type="email" placeholder="Email Address" defaultValue="" name="email"/>
                 </div>
               </div>
 
               <div class="field">
                 <label class="label">Message</label>
                 <div class="control">
-                      <textArea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name="message" value={this.state.ticketMessage}  onChange={this.handleChange} onSubmit={this.handleSubmit} defaultValue=""></textArea>
+                  <textArea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name="message" value={this.state.ticketMessage}  onChange={this.handleChange} onSubmit={this.handleSubmit} defaultValue=""></textArea>
                 </div>
               </div>
 

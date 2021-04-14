@@ -32,9 +32,9 @@ class NavBar extends React.Component {
 
         <div className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">
+            {/* <a className="navbar-item">
               Home
-            </a>
+            </a> */}
             {/* <a class="navbar-item">
               Calculators
             </a>
