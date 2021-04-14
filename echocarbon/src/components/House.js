@@ -76,7 +76,7 @@ class House extends React.Component {
 
           <div class="columns is-centered">
             <div class="column is-half">
-              <h2>Water: {this.state.water} gallons per month</h2>
+              <h2 class="title is-4">Water: {this.state.water} gallons per month</h2>
               <Slider
                     min={0}
                     max={5000}
@@ -96,7 +96,7 @@ class House extends React.Component {
     
           <div class="columns is-centered">
             <div class="column is-half">
-              <h2>Natural Gas: {this.state.gas} cubic ft per month</h2>
+              <h2 class="title is-4">Natural Gas: {this.state.gas} cubic ft per month</h2>
               <Slider
                     min={0}
                     max={10000}
@@ -116,7 +116,7 @@ class House extends React.Component {
 
           <div class="columns is-centered">
             <div class="column is-half">
-              <h2>Electricity: {this.state.electricity} kWh per month</h2>
+              <h2 class="title is-4">Electricity: {this.state.electricity} kWh per month</h2>
               <Slider
                     min={0}
                     max={2000}
@@ -138,29 +138,29 @@ class House extends React.Component {
           <div class="columns is-centered">
             <div class="column is-half">
             
-            { this.state.avgScore <= 100 && this.state.avgScore >= 80 && <h1 class="title is-2"> Eco Grade: 🌲 Eco Hero! {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficent")} </h1> }
-            { this.state.avgScore < 80 && this.state.avgScore >= 20 && <h1 class="title is-2">Eco Grade: 😃 Eco Aware {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.avgScore < 20 && this.state.avgScore >= -15 && <h1 class="title is-2">Eco Grade: 😮 Average Earthling {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.avgScore < -15 && this.state.avgScore >= -30 && <h1 class="title is-2">Eco Grade: 🥵 Watch Out {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.avgScore < -30  &&  <h1 class="title is-2">Eco Grade: 💀 Help Earth! You can become Earth's Hero {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficent")}</h1> }
+            { this.state.avgScore <= 100 && this.state.avgScore >= 80 && <h1 class="title is-2"> Eco Grade: 🌲 Eco Hero! {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficient")} </h1> }
+            { this.state.avgScore < 80 && this.state.avgScore >= 20 && <h1 class="title is-2">Eco Grade: 😃 Eco Aware {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.avgScore < 20 && this.state.avgScore >= -15 && <h1 class="title is-2">Eco Grade: 😮 Average Earthling {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.avgScore < -15 && this.state.avgScore >= -30 && <h1 class="title is-2">Eco Grade: 🥵 Watch Out {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.avgScore < -30  &&  <h1 class="title is-2">Eco Grade: 💀 Help Earth! You can become Earth's Hero {this.state.showScore && ((this.state.avgScore*1.0).toFixed(0) + "% Efficient")}</h1> }
 
-            { this.state.waterScore <= 100 && this.state.waterScore >= 80 && <h1 class="title is-4">Water: 🌲 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.waterScore < 80 && this.state.waterScore >= 20  && <h2 class="title is-4">Water: 😃 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.waterScore < 20 && this.state.waterScore >= -15 && <h2 class="title is-4">Water: 😮 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.waterScore < -15  && this.state.waterScore >= -30 && <h2 class="title is-4">Water: 🥵 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.waterScore < -30  &&  <h1 class="title is-4">Water: 💀 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficent")}</h1> }
+            { this.state.waterScore <= 100 && this.state.waterScore >= 80 && <h1 class="title is-4">Water: 🌲 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.waterScore < 80 && this.state.waterScore >= 20  && <h2 class="title is-4">Water: 😃 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.waterScore < 20 && this.state.waterScore >= -15 && <h2 class="title is-4">Water: 😮 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.waterScore < -15  && this.state.waterScore >= -30 && <h2 class="title is-4">Water: 🥵 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.waterScore < -30  &&  <h1 class="title is-4">Water: 💀 {this.state.showScore && ((this.state.waterScore*1.0).toFixed(0) + "% Efficient")}</h1> }
             
-            { this.state.gasScore <= 100 && this.state.gasScore >= 80 && <h1 class="title is-4">Gas: 🌲 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.gasScore < 80 && this.state.gasScore >= 20  && <h2 class="title is-4">Gas: 😃 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.gasScore < 20 && this.state.gasScore >= -15 && <h2 class="title is-4">Gas: 😮 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.gasScore < -15  && this.state.gasScore >= -30 && <h2 class="title is-4">Gas: 🥵 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.gasScore < -30  &&  <h1 class="title is-4">Gas: 💀 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficent")}</h1> }
+            { this.state.gasScore <= 100 && this.state.gasScore >= 80 && <h1 class="title is-4">Gas: 🌲 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.gasScore < 80 && this.state.gasScore >= 20  && <h2 class="title is-4">Gas: 😃 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.gasScore < 20 && this.state.gasScore >= -15 && <h2 class="title is-4">Gas: 😮 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.gasScore < -15  && this.state.gasScore >= -30 && <h2 class="title is-4">Gas: 🥵 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.gasScore < -30  &&  <h1 class="title is-4">Gas: 💀 {this.state.showScore && ((this.state.gasScore*1.0).toFixed(0) + "% Efficient")}</h1> }
 
-            { this.state.electricityScore <= 100 && this.state.electricityScore >= 80 && <h1 class="title is-4">Electricity: 🌲 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficent")}</h1> }
-            { this.state.electricityScore < 80 && this.state.electricityScore >= 20  && <h2 class="title is-4">Electricity: 😃 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.electricityScore < 20 && this.state.electricityScore >= -15 && <h2 class="title is-4">Electricity: 😮 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.electricityScore < -15  && this.state.electricityScore >= -30 && <h2 class="title is-4">Electricity: 🥵 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficent")}</h2> }
-            { this.state.electricityScore < -30  &&  <h1 class="title is-4">Electricity: 💀 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficent")}</h1> }
+            { this.state.electricityScore <= 100 && this.state.electricityScore >= 80 && <h1 class="title is-4">Electricity: 🌲 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficient")}</h1> }
+            { this.state.electricityScore < 80 && this.state.electricityScore >= 20  && <h2 class="title is-4">Electricity: 😃 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.electricityScore < 20 && this.state.electricityScore >= -15 && <h2 class="title is-4">Electricity: 😮 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.electricityScore < -15  && this.state.electricityScore >= -30 && <h2 class="title is-4">Electricity: 🥵 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficient")}</h2> }
+            { this.state.electricityScore < -30  &&  <h1 class="title is-4">Electricity: 💀 {this.state.showScore && ((this.state.electricityScore*1.0).toFixed(0) + "% Efficient")}</h1> }
 
 
             {/* {(this.state.solar)?(<h2 class="title is-3">Electricity Score: {(this.state.electricityScore * 1).toFixed(2)}%</h2>):(<div/>)} */}
