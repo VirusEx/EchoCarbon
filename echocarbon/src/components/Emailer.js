@@ -7,13 +7,16 @@ export default function Emailer() {
     function sendEmail(e){
         e.preventDefault();
 
-        emailjs.sendForm('service_gy667yu', 'template_ohyobpd', e.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
+        // emailjs.sendForm('service_gy667yu', 'template_ohyobpd', e.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+        // emailjs.sendForm('service_2wmow6p', 'template_9xqgkef', e.target, 'user_JHjDXIrrcTdmB9Wa4RcC4')
+        //   .then((result) => {
+        //       console.log(result.text);
+        //   }, (error) => {
+        //       console.log(error.text);
+        //   });
         e.target.reset()
+
+        window.alert("Your carbon footprint report & goal were successfully sent!")
     }
 
     return(

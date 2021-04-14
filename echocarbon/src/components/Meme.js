@@ -48,11 +48,12 @@ class Meme extends Component {
           <h1 class="title is-1">Environmental Meme Generator</h1>
           <div class="columns is-centered">
             <div class="column is-one-third">
+              <label class="label">Top Text:</label>
               <input
                 class="input"
                 type="text"
                 name="topText"
-                placeholder="top text"
+                placeholder="Top Text"
                 onChange={this.handleChange}
                 value={this.state.topText}
               />
@@ -61,11 +62,12 @@ class Meme extends Component {
 
           <div class="columns is-centered">
             <div class="column is-one-third">
+              <label class="label">Bottom Text:</label>
               <input
                 class="input"
                 type="text"
                 name="bottomText"
-                placeholder="bottom text"
+                placeholder="Bottom Text"
                 onChange={this.handleChange}
                 value={this.state.bottomText}
               />
@@ -74,11 +76,12 @@ class Meme extends Component {
 
           <div class="columns is-centered">
             <div class="column is-one-third">
+              <label class="label">Font Size:</label>
               <input
                 class="input"
                 type="number"
                 name="font_size"
-                placeholder="font size"
+                placeholder="Font Size"
                 onChange={this.handleChange}
                 value={this.state.font_size}
                 min="0"

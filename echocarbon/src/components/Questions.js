@@ -34,13 +34,15 @@ class Questions extends React.Component {
     //       console.log(error.text);
     //   });
 
-    //   emailjs.sendForm('service_gy667yu', 'template_py26dfq', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
+    //   emailjs.sendForm('service_gy667yu', 'template_ohyobpd', event.target, 'user_VZ5P3vcuhc1OYWRMpNR1h')
     //   .then((result) => {
     //       console.log(result.text);
     //   }, (error) => {
     //       console.log(error.text);
     //   });
     //   event.target.reset()
+
+      window.alert("Your ticket was successfully submitted!")
   }
 
   clearTicketMessage(event) {
@@ -109,12 +111,13 @@ class Questions extends React.Component {
               {
                 localStorage.getItem("tM") === "" ? "" :
                 <div class="box">
-                  <label class="label">Previous Message:</label>
+                  <label class="label">Previous Ticket Message:</label>
                   
-                  <blockquote>{localStorage.getItem("tM")}</blockquote>
+                  <span class="tag is-large">{localStorage.getItem("tM")}</span>
                   <br></br>
                   <label class="label">Sent at:</label>
-                  {localStorage.getItem("tMTime")}
+                  <span class="tag is-large">{localStorage.getItem("tMTime")}</span>
+                  <br></br>
                   <br></br>
                   <button class="button is-danger" onSubmit={this.clearTicketMessage} onClick={this.refreshPage}>Delete Previous Message</button>
                 </div>
