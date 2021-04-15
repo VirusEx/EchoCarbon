@@ -60,7 +60,7 @@ class Questions extends React.Component {
     return (
       <div>
         <div class="box">
-          <h1 class="title is-1">Customer Ticker Creator</h1>
+          <h1 class="title is-1">Customer Ticket Creator</h1>
         </div>
         <div>
           <br></br>
