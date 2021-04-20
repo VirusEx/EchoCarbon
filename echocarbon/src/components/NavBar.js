@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
+import Auth from '@aws-amplify/auth'
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -47,6 +48,11 @@ class NavBar extends React.Component {
           </div>
 
           <div className="navbar-end">
+            <div className="navbar-item">
+              <div>
+                  Hello, {Auth.user.username}
+              </div>
+            </div>
             <div className="navbar-item">
               <div className="box has-background-success">
                     <header className="title is-7 has-text-green ">

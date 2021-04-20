@@ -10,7 +10,8 @@ import Meme from './components/Meme'
 import Questions from './components/Questions'
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
-import Amplify, { Interactions } from 'aws-amplify';
+import Auth from '@aws-amplify/auth'
+import Amplify, { auth0SignInButton, Interactions } from 'aws-amplify';
 import awsconfig from './aws-exports';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import EcoBot from './components/EcoBot';
@@ -24,7 +25,7 @@ function App() {
     <Router>
       <NavBar/>
       <div className="App" id="body">
-        
+        {Auth.user.user}
         {/* <div style={ margin: 0; padding: 0; height: 100%; width: 100%; background-color: green;  }> */}
         <div>
         <script src="https://unpkg.com/react-rangeslider/umd/rangeslider.min.js"></script>
