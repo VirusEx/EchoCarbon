@@ -1,5 +1,5 @@
 {
-    "resourceName": "echocarbonChatbot",
+    "resourceName": "echochatbot",
     "intents": [
         {
             "cancelMessage": "Okay, I have cancelled your reservation in progress.",

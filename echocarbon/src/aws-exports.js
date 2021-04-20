@@ -3,22 +3,26 @@
 
 const awsmobile = {
     "aws_project_region": "us-west-2",
-    "aws_content_delivery_bucket": "echocarbon2-20210308222932-hostingbucket-dev",
+    "aws_content_delivery_bucket": "echocarbon2-20210308222932-hostingbucket-echo",
     "aws_content_delivery_bucket_region": "us-west-2",
-    "aws_content_delivery_url": "http://echocarbon2-20210308222932-hostingbucket-dev.s3-website-us-west-2.amazonaws.com",
-    "aws_cognito_identity_pool_id": "us-west-2:0c80887d-3c90-41e2-a6ce-c37b78c842f6",
+    "aws_content_delivery_url": "http://echocarbon2-20210308222932-hostingbucket-echo.s3-website-us-west-2.amazonaws.com",
+    "aws_cognito_identity_pool_id": "us-west-2:d71e956b-7336-4d19-b25c-1909f3f73451",
     "aws_cognito_region": "us-west-2",
-    "aws_user_pools_id": "us-west-2_YU6nuhndg",
-    "aws_user_pools_web_client_id": "7g54lsdieaeoj7t32s2tbjdbpq",
+    "aws_user_pools_id": "us-west-2_TxJhWcQZu",
+    "aws_user_pools_web_client_id": "6toh8jmutocdpg08faj0jppnsg",
     "oauth": {},
     "aws_bots": "enable",
     "aws_bots_config": [
         {
-            "name": "BookTrip_dev",
+            "name": "BookTrip_echo",
             "alias": "$LATEST",
             "region": "us-west-2"
         }
-    ]
+    ],
+    "aws_appsync_graphqlEndpoint": "https://wtjpri2jizgzpgikecjmdtp6qe.appsync-api.us-west-2.amazonaws.com/graphql",
+    "aws_appsync_region": "us-west-2",
+    "aws_appsync_authenticationType": "API_KEY",
+    "aws_appsync_apiKey": "da2-y4loodw63jaxbpvjeqbjzpzeqa"
 };
 
 

@@ -25,7 +25,7 @@ class EcoBot extends React.Component {
   render() {
       return (
         <AmplifyChatbot
-            botName="BookTrip_dev"
+            botName="BookTrip_echo"
             botTitle="EchoBot"
             welcomeMessage="Hello, how can I help you?"
         />
