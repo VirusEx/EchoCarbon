@@ -8,6 +8,10 @@ import House from './components/House'
 import Map from './components/Map'
 import Meme from './components/Meme'
 import Questions from './components/Questions'
+import Volunteer from './components/Volunteer'
+import Alarm from './components/Alarm'
+import Weather from './components/Weather'
+import Quiz from './components/Quiz'
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import Auth from '@aws-amplify/auth'
@@ -37,6 +41,10 @@ function App() {
             <Route path="/map" component={Map}/>
             <Route path="/meme" component={Meme}/>
             <Route path="/questions" component={Questions}/>
+            <Route path="/quiz" component={Quiz}/>
+            <Route path="/volunteer" component={Volunteer}/>
+            <Route path="/alarm" component={Alarm}/>
+            <Route path="/weather" component={Weather}/>
           </Switch>
 
           {/* <Calculator/> */}

@@ -42,6 +42,18 @@ class LinkButtons extends React.Component {
             <div class="column">
               <Link to='/questions'><button class="button is-medium is-fullwidth is-success is-outlined">Customer Ticket Creator</button></Link>
             </div>
+            <div class="column">
+              <Link to='/quiz'><button class="button is-medium is-fullwidth is-success is-outlined">Quiz</button></Link>
+            </div>
+            <div class="column">
+              <Link to='/volunteer'><button class="button is-medium is-fullwidth is-success is-outlined">Volunteer</button></Link>
+            </div>
+            <div class="column">
+              <Link to='/alarm'><button class="button is-medium is-fullwidth is-success is-outlined">Alarm</button></Link>
+            </div>
+            <div class="column">
+              <Link to='/weather'><button class="button is-medium is-fullwidth is-success is-outlined">Weather</button></Link>
+            </div>
           </div>
 
       );
