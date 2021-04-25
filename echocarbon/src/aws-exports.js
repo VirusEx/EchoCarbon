@@ -19,10 +19,15 @@ const awsmobile = {
             "region": "us-west-2"
         }
     ],
-    "aws_appsync_graphqlEndpoint": "https://wtjpri2jizgzpgikecjmdtp6qe.appsync-api.us-west-2.amazonaws.com/graphql",
-    "aws_appsync_region": "us-west-2",
-    "aws_appsync_authenticationType": "API_KEY",
-    "aws_appsync_apiKey": "da2-y4loodw63jaxbpvjeqbjzpzeqa"
+    "aws_user_files_s3_bucket": "echobucket200605-echo",
+    "aws_user_files_s3_bucket_region": "us-west-2",
+    "aws_dynamodb_all_tables_region": "us-west-2",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "user-echo",
+            "region": "us-west-2"
+        }
+    ]
 };
 
 

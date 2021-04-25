@@ -44,7 +44,8 @@
             "utterances": [
                 "Make a car reservation",
                 "Reserve a car",
-                "Book a car"
+                "Book a car",
+                "book a car"
             ],
             "intentName": "BookCar",
             "newSlotTypes": [
@@ -116,5 +117,6 @@
     ],
     "outputVoice": "Matthew",
     "botName": "BookTrip",
-    "coppa": false
+    "coppa": false,
+    "shortId": "612fc6b0"
 }

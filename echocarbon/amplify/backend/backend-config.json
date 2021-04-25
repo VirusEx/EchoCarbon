@@ -21,23 +21,15 @@
       "build": true
     }
   },
-  "api": {
-    "EchoAPI": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7,
-              "description": ""
-            }
-          },
-          "additionalAuthenticationProviders": []
-        }
-      }
+  "api": {},
+  "storage": {
+    "echostorage": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    },
+    "echodynamo": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
     }
-  },
-  "storage": {}
+  }
 }

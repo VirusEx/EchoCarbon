@@ -100,6 +100,8 @@ exports.handler = function(event, context) {
             
                 "Book a car",
             
+                "book a car",
+            
             ],
         
             "fulfillmentActivity": {
@@ -506,7 +508,7 @@ function ensureLambdaFunctionAccess(intent){
 
         const params = {
             FunctionName: lambdaName,
-            StatementId: `Lex-${intent.name}`+ "f1fca965",
+            StatementId: `Lex-${intent.name}`+ "612fc6b0",
             Action: 'lambda:InvokeFunction',
             Principal: 'lex.amazonaws.com',
             SourceArn: `arn:aws:lex:${region}:${accountId}:intent:${intent.name}:*`,
