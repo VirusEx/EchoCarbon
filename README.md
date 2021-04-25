@@ -23,6 +23,8 @@ npm i react-svg-worldmap
 
 npm i react-rangeslider
 
+npm i react-timer-hook
+
 npm start
 
 # Possible Commands
