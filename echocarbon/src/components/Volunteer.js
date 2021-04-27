@@ -88,96 +88,131 @@ class Volunteer extends React.Component {
         <div class="box">
           <h1 class="title is-1">Volunteering</h1>
         </div>
-        <div>
+        <div class="">
           <br></br>
+          <div class="box">
+            <h1 class="title is-3">Available Events</h1>
+          </div>
           <div class="columns">
             <div class="column">
               <div class="box">
-                <div class="box">
+                <div class="notification">
                   Content
                 </div>
-                <button class="button" onClick={this.addEvent1}>Join Event #1</button>
+                {
+                  localStorage.getItem("event1") == "true" ?
+                  <button class="button is-info" onClick={this.addEvent1} disabled>Join Event #1</button> :
+                  <button class="button is-info" onClick={this.addEvent1}>Join Event #1</button>
+                }
               </div>
-              {
-                localStorage.getItem("event1") == "true" ?
-                <div class="box">
-                  <div>
-                    test
-                  </div>
-                  <button class="button is-danger" onClick={this.removeEvent1}>Leave Event #1</button>
-                  <br></br>
-                  Current attendees:
-                  <br></br>
-                  {Auth.user.username}
-                </div> : ""
-              }
             </div>
             <div class="column">
               <div class="box">
-                <div class="box">
+                <div class="notification">
                   Content
                 </div>
-                <button class="button" onClick={this.addEvent2}>Join Event #2</button>
+                {
+                  localStorage.getItem("event2") == "true" ?
+                  <button class="button is-info" onClick={this.addEvent2} disabled>Join Event #2</button> :
+                  <button class="button is-info" onClick={this.addEvent2}>Join Event #2</button>
+                }
               </div>
-              {
-                localStorage.getItem("event2") == "true" ?
-                <div class="box">
-                  <div>
-                    test
-                  </div>
-                  <button class="button is-danger" onClick={this.removeEvent2}>Leave Event #2</button>
-                  <br></br>
-                  Current attendees:
-                  <br></br>
-                  {Auth.user.username}
-                </div> : ""
-              }
+              
             </div>
             <div class="column">
               <div class="box">
-                <div class="box">
+                <div class="notification">
                   Content
                 </div>
-                <button class="button" onClick={this.addEvent3}>Join Event #3</button>
+                {
+                  localStorage.getItem("event3") == "true" ?
+                  <button class="button is-info" onClick={this.addEvent3} disabled>Join Event #3</button> :
+                  <button class="button is-info" onClick={this.addEvent3}>Join Event #3</button>
+                }
               </div>
-              {
-                localStorage.getItem("event3") == "true" ?
-                <div class="box">
-                  <div>
-                    test
-                  </div>
-                  <button class="button is-danger" onClick={this.removeEvent3}>Leave Event #3</button>
-                  <br></br>
-                  Current attendees:
-                  <br></br>
-                  {Auth.user.username}
-                </div> : ""
-              }
+              
             </div>
             <div class="column">
               <div class="box">
-                <div class="box">
+                <div class="notification">
                   Content
                 </div>
-                <button class="button" onClick={this.addEvent4}>Join Event #4</button>
+                {
+                  localStorage.getItem("event4") == "true" ?
+                  <button class="button is-info" onClick={this.addEvent4} disabled>Join Event #4</button> :
+                  <button class="button is-info" onClick={this.addEvent4}>Join Event #4</button>
+                }
               </div>
-              {
-                localStorage.getItem("event4") == "true" ?
-                <div class="box">
-                  <div>
-                    test
-                  </div>
-                  <button class="button is-danger" onClick={this.removeEvent4}>Leave Event #4</button>
-                  <br></br>
-                  Current attendees:
-                  <br></br>
-                  {Auth.user.username}
-                </div> : ""
-              }
+              
             </div>
           </div>
-          
         </div>
+        
+        <br></br>
+
+        <div class="">
+          <div class="box">
+            <h1 class="title is-3">Attending Events:</h1>
+          </div>
+          <div class="columns is-centered">
+              <div class="column is-half">
+                {
+                  localStorage.getItem("event1") == "true" ?
+                  <div class="box">
+                    <div>
+                      test
+                    </div>
+                    <button class="button is-danger" onClick={this.removeEvent1}>Leave Event #1</button>
+                    <br></br>
+                    Current attendees:
+                    <br></br>
+                    {Auth.user.username}
+                  </div> : ""
+                }
+                {
+                  localStorage.getItem("event2") == "true" ?
+                  <div class="box">
+                    <div>
+                      test
+                    </div>
+                    <button class="button is-danger" onClick={this.removeEvent2}>Leave Event #2</button>
+                    <br></br>
+                    Current attendees:
+                    <br></br>
+                    {Auth.user.username}
+                    </div> : ""
+                }
+                {
+                  localStorage.getItem("event3") == "true" ?
+                  <div class="box">
+                    <div>
+                      test
+                    </div>
+                    <button class="button is-danger" onClick={this.removeEvent3}>Leave Event #3</button>
+                    <br></br>
+                    Current attendees:
+                    <br></br>
+                    {Auth.user.username}
+                  </div> : ""
+                }
+                {
+                  localStorage.getItem("event4") == "true" ?
+                  <div class="box">
+                    <div>
+                      test
+                    </div>
+                    <button class="button is-danger" onClick={this.removeEvent4}>Leave Event #4</button>
+                    <br></br>
+                    Current attendees:
+                    <br></br>
+                    {Auth.user.username}
+                  </div> : ""
+                }
+              </div>
+          </div>
+        </div>
+
+        
     </div>
       );
     }
