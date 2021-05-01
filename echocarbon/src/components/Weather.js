@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 
+import Forecast from "./Forecast/Forecast";
+
 class Weather extends React.Component {
 
   constructor(props) {
@@ -41,6 +43,7 @@ class Weather extends React.Component {
           </div>
           <div>
             Content
+            <Forecast />
           </div>
       
         </div>
