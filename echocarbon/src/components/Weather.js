@@ -42,7 +42,6 @@ class Weather extends React.Component {
             <h1 class="title is-1">Weather</h1>
           </div>
           <div>
-            Content
             <Forecast />
           </div>
       
