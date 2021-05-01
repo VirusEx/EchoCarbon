@@ -91,15 +91,11 @@ const Forecast = () => {
                             </div>
                         </div>
 
-                        <button type="submit" className="button">Get Forecast</button>
+                        <button type="submit" className="button is-info">Get Forecast</button>
                         <br></br>
                         <br></br>
                     </form>
-                    <Conditions
-                    responseObj={responseObj}
-                    error={error} //new
-                    loading={loading} //new
-                    />
+                    <Conditions responseObj={responseObj} error={error} loading={loading}/>
                 </div>
             </div>
         </div>
