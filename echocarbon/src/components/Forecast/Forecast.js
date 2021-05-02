@@ -49,7 +49,7 @@ const Forecast = () => {
         <div class="columns is-centered">
                     <div class="column is-half">
                 <div className="box">
-                    <h2 class="title is-4">Find Current Weather Conditions</h2>
+                    <h2 class="title is-4">Find the Current Weather in a City</h2>
                     <form onSubmit={getForecast}>
                         <div class="columns is-centered">
                             <div class="column is-one-third">
@@ -85,7 +85,7 @@ const Forecast = () => {
                                             value="metric"
                                             onChange={(e) => setUnit(e.target.value)}
                                             />
-                                        Celcius
+                                        Celsius
                                     </label>
                                 </div>
                             </div>

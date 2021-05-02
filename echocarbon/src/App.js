@@ -9,6 +9,7 @@ import Map from './components/Map'
 import Meme from './components/Meme'
 import Questions from './components/Questions'
 import Volunteer from './components/Volunteer'
+import Timer from './components/Timer'
 import Alarm from './components/Alarm'
 import Weather from './components/Weather'
 import Quiz from './components/Quiz'
@@ -44,6 +45,7 @@ function App() {
             <Route path="/quiz" component={Quiz}/>
             <Route path="/volunteer" component={Volunteer}/>
             <Route path="/alarm" component={Alarm}/>
+            <Route path="/timer" component={Timer}/>
             <Route path="/weather" component={Weather}/>
           </Switch>
 
