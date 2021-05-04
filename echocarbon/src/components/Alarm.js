@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { useTimer } from 'react-timer-hook';
+import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 //Show zero codes
@@ -11,6 +12,7 @@ function padLeadingZeros(num, size) {
 
 //Timer codes
 function MyTimer({ expiryTimestamp }) {
+  const [showerMinutes, setshowerMinutes] = useState(5);
   const {
     seconds,
     minutes,
@@ -21,26 +23,30 @@ function MyTimer({ expiryTimestamp }) {
     pause,
     resume,
     restart,
-  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
+  } = useTimer({ expiryTimestamp, onExpire: () => window.alert('Your Shower Time is up!') });
 
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h1>react-timer-hook </h1>
-      <p>Timer Demo</p>
+      <h1>Echo Shower Alarm</h1>
+      <p>Please use the + and - button below to set your desired shower time</p>
       <div style={{fontSize: '100px'}}>
         <span>{days}</span>:<span>{hours}</span>:<span>{padLeadingZeros(minutes,2)}</span>:<span>{padLeadingZeros(seconds,2)}</span>
       </div>
       <p>{isRunning ? 'Running' : 'Not running'}</p>
-      <button onClick={start}>Start</button>
-      <button onClick={pause}>Pause</button>
-      <button onClick={resume}>Resume</button>
+      <p>ShowerTime</p>
+      <div style={{fontSize:'30px'}}><button onClick={() => setshowerMinutes(showerMinutes - 1)}>
+    -</button><span>{showerMinutes}</span><button onClick={() => setshowerMinutes(showerMinutes + 1)}>
+    +
+  </button>Mintues</div>
       <button onClick={() => {
         // Restarts to 5 minutes timer
         const time = new Date();
-        time.setSeconds(time.getSeconds() + 10);
+        time.setSeconds(time.getSeconds() + showerMinutes*60);
         restart(time)
-      }}>Restart</button>
+      }}>Start</button>
+      <button onClick={pause}>Pause</button>
+      <button onClick={resume}>Resume</button>
     </div>
   );
 }
