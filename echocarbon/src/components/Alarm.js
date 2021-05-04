@@ -25,20 +25,28 @@ function MyTimer({ expiryTimestamp }) {
     restart,
   } = useTimer({ expiryTimestamp, onExpire: () => window.alert('Your Shower Time is up!') });
 
+  function handleDecreaseOnClick(){
+    if (showerMinutes>0) {
+      setshowerMinutes(showerMinutes - 1);
+    }
+  }
+
 
   return (
     <div style={{textAlign: 'center'}}>
-      <h1>Echo Shower Alarm</h1>
+      <h1></h1>
       <p>Please use the + and - button below to set your desired shower time</p>
       <div style={{fontSize: '100px'}}>
-        <span>{days}</span>:<span>{hours}</span>:<span>{padLeadingZeros(minutes,2)}</span>:<span>{padLeadingZeros(seconds,2)}</span>
+        <span>{padLeadingZeros(minutes,2)}</span>:<span>{padLeadingZeros(seconds,2)}</span>
       </div>
       <p>{isRunning ? 'Running' : 'Not running'}</p>
       <p>ShowerTime</p>
-      <div style={{fontSize:'30px'}}><button onClick={() => setshowerMinutes(showerMinutes - 1)}>
-    -</button><span>{showerMinutes}</span><button onClick={() => setshowerMinutes(showerMinutes + 1)}>
-    +
-  </button>Mintues</div>
+      <div style={{fontSize:'30px'}}>
+        <button onClick={(handleDecreaseOnClick)}>-</button>
+        <span>{showerMinutes}</span>
+        <button onClick={() => setshowerMinutes(showerMinutes + 1)}>+</button>
+        Mintues
+      </div>
       <button onClick={() => {
         // Restarts to 5 minutes timer
         const time = new Date();
