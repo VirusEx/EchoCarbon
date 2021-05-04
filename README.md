@@ -25,6 +25,8 @@ npm i react-rangeslider
 
 npm i react-timer-hook
 
+npm i react-compound-timer
+
 npm start
 
 # Possible Commands
