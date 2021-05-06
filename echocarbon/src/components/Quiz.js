@@ -4,57 +4,57 @@ import { Link } from 'react-router-dom';
 function QuizDisplay() {
     const questions = [
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'What day is Earth Day?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'August 12th', isCorrect: false },
+				{ answerText: 'December 21st', isCorrect: false },
+				{ answerText: 'April 22nd', isCorrect: true },
+				{ answerText: 'October 31st', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'Who is CEO of Tesla?',
+			questionText: 'Who invented Environmentalism?',
 			answerOptions: [
-				{ answerText: 'Jeff Bezos', isCorrect: false },
-				{ answerText: 'Elon Musk', isCorrect: true },
-				{ answerText: 'Bill Gates', isCorrect: false },
-				{ answerText: 'Tony Stark', isCorrect: false },
+				{ answerText: 'John Muir', isCorrect: true },
+				{ answerText: 'Greta Thunberg', isCorrect: false },
+				{ answerText: 'Wangari Maathai', isCorrect: false },
+				{ answerText: 'Rachel Carson', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'The iPhone was created by which company?',
+			questionText: 'Which country is the most environmentally friendly?',
 			answerOptions: [
-				{ answerText: 'Apple', isCorrect: true },
-				{ answerText: 'Intel', isCorrect: false },
-				{ answerText: 'Amazon', isCorrect: false },
-				{ answerText: 'Microsoft', isCorrect: false },
+				{ answerText: 'Switzerland', isCorrect: true },
+				{ answerText: 'United States of America', isCorrect: false },
+				{ answerText: 'Denmark', isCorrect: false },
+				{ answerText: 'Ireland', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'How many Harry Potter books are there?',
+			questionText: 'Who invented biodegradable plastic?',
 			answerOptions: [
-				{ answerText: '1', isCorrect: false },
-				{ answerText: '4', isCorrect: false },
-				{ answerText: '6', isCorrect: false },
-				{ answerText: '7', isCorrect: true },
+				{ answerText: 'Thomas Edison', isCorrect: false },
+				{ answerText: 'Leo Baekeland', isCorrect: false },
+				{ answerText: 'Mauric Lemoigne', isCorrect: false },
+				{ answerText: 'Calia Bastioli', isCorrect: true },
 			],
 		},
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'Which country has emitted the most carbon dioxide?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: 'United States', isCorrect: false },
+				{ answerText: 'India', isCorrect: false },
+				{ answerText: 'China', isCorrect: true },
+				{ answerText: 'Russia', isCorrect: false },
 			],
 		},
 		{
-			questionText: 'What is the capital of France?',
+			questionText: 'The ocean produces what percentage of oxygen on earth?',
 			answerOptions: [
-				{ answerText: 'New York', isCorrect: false },
-				{ answerText: 'London', isCorrect: false },
-				{ answerText: 'Paris', isCorrect: true },
-				{ answerText: 'Dublin', isCorrect: false },
+				{ answerText: '90%', isCorrect: false },
+				{ answerText: '70%', isCorrect: true },
+				{ answerText: '50%', isCorrect: false },
+				{ answerText: '20%', isCorrect: false },
 			],
 		},
 	];
@@ -107,7 +107,7 @@ function QuizDisplay() {
 						<div className="">
 							<div class="columns is-centered">
 								<div class="column is-half">
-									<progress class="progress is-info" value={currentQuestion} max={questions.length}></progress>
+									<progress class="progress is-info" value={currentQuestion + 1} max={questions.length}></progress>
 							</div>
 							<br></br>
 							<br></br>

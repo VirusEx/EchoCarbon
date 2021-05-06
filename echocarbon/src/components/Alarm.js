@@ -45,7 +45,7 @@ function MyTimer({ expiryTimestamp }) {
         <button onClick={(handleDecreaseOnClick)}>-</button>
         <span>{showerMinutes}</span>
         <button onClick={() => setshowerMinutes(showerMinutes + 1)}>+</button>
-        Mintues
+        Minutes
       </div>
       <button onClick={() => {
         // Restarts to 5 minutes timer
