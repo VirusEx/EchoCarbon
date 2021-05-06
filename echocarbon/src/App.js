@@ -44,7 +44,7 @@ function App() {
             <Route path="/questions" component={Questions}/>
             <Route path="/quiz" component={Quiz}/>
             <Route path="/volunteer" component={Volunteer}/>
-            <Route path="/alarm" component={Alarm}/>
+            {/* <Route path="/alarm" component={Alarm}/> */}
             <Route path="/showertimer" component={ShowerTimer}/>
             <Route path="/weather" component={Weather}/>
           </Switch>

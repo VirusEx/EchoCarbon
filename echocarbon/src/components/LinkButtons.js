@@ -51,9 +51,9 @@ class LinkButtons extends React.Component {
             <div class="column">
               <Link to='/showertimer'><button class="button is-medium is-fullwidth is-success is-outlined">Shower Timer</button></Link>
             </div>
-            <div class="column">
+            {/* <div class="column">
               <Link to='/alarm'><button class="button is-medium is-fullwidth is-success is-outlined">Timer Alarm</button></Link>
-            </div>
+            </div> */}
             <div class="column">
               <Link to='/weather'><button class="button is-medium is-fullwidth is-success is-outlined">Weather</button></Link>
             </div>
