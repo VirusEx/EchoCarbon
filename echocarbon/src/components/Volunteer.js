@@ -363,13 +363,7 @@ class Volunteer extends React.Component {
                       {localStorage.getItem('lang') === 'chi' && "离开事件1"}
                       {localStorage.getItem('lang') === 'spa' && "Salir del evento #1"}
                     </button>
-                    <br></br>                    
-                    {localStorage.getItem('lang') === null && "Current attendees:"}
-                    {localStorage.getItem('lang') === 'en' && "Current attendees:"}
-                    {localStorage.getItem('lang') === 'chi' && "当前参加者："}
-                    {localStorage.getItem('lang') === 'spa' && "Asistentes actuales:"}
-                    <br></br>
-                    {Auth.user.username}
+
                   </div> : ""
                 }
                 {
