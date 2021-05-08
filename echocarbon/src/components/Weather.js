@@ -39,7 +39,12 @@ class Weather extends React.Component {
         
         <div className="">
           <div class="box">
-            <h1 class="title is-1">Weather</h1>
+            <h1 class="title is-1">              
+              {localStorage.getItem('lang') === null && "Weather"}
+              {localStorage.getItem('lang') === 'en' && "Weather"}
+              {localStorage.getItem('lang') === 'chi' && "天气"}
+              {localStorage.getItem('lang') === 'spa' && "Clima"}
+            </h1>
           </div>
           <div>
             <Forecast />

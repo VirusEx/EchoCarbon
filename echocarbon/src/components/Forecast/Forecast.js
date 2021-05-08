@@ -49,7 +49,12 @@ const Forecast = () => {
         <div class="columns is-centered">
                     <div class="column is-half">
                 <div className="box">
-                    <h2 class="title is-4">Find the Current Weather in a City</h2>
+                    <h2 class="title is-4">                        
+                        {localStorage.getItem('lang') === null && "Find the Current Weather in a City"}
+                        {localStorage.getItem('lang') === 'en' && "Find the Current Weather in a City"}
+                        {localStorage.getItem('lang') === 'chi' && "查找城市的当前天气"}
+                        {localStorage.getItem('lang') === 'spa' && "Encuentre el clima actual en una ciudad"}
+                    </h2>
                     <form onSubmit={getForecast}>
                         <div class="columns is-centered">
                             <div class="column is-one-third">
@@ -74,8 +79,11 @@ const Forecast = () => {
                                             checked={unit === "imperial"}
                                             value="imperial"
                                             onChange={(e) => setUnit(e.target.value)}
-                                            />
-                                        Fahrenheit
+                                            />                                        
+                                        {localStorage.getItem('lang') === null && " Fahrenheit"}
+                                        {localStorage.getItem('lang') === 'en' && " Fahrenheit"}
+                                        {localStorage.getItem('lang') === 'chi' && " 华氏温度"}
+                                        {localStorage.getItem('lang') === 'spa' && " Fahrenheit"}
                                     </label>
                                     <label className="radio">
                                         <input
@@ -85,13 +93,21 @@ const Forecast = () => {
                                             value="metric"
                                             onChange={(e) => setUnit(e.target.value)}
                                             />
-                                        Celsius
+                                        {localStorage.getItem('lang') === null && " Celsius"}
+                                        {localStorage.getItem('lang') === 'en' && " Celsius"}
+                                        {localStorage.getItem('lang') === 'chi' && " 摄氏温度"}
+                                        {localStorage.getItem('lang') === 'spa' && " Celsius"}
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" className="button is-info">Get Forecast</button>
+                        <button type="submit" className="button is-info">                            
+                            {localStorage.getItem('lang') === null && "Get Forecast"}
+                            {localStorage.getItem('lang') === 'en' && "Get Forecast"}
+                            {localStorage.getItem('lang') === 'chi' && "取得预测"}
+                            {localStorage.getItem('lang') === 'spa' && "Obtener pronóstico"}
+                        </button>
                         <br></br>
                         <br></br>
                     </form>

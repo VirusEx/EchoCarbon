@@ -87,23 +87,49 @@ class Volunteer extends React.Component {
       return (
         <div>
         <div class="box">
-          <h1 class="title is-1">Volunteering</h1>
+          <h1 class="title is-1">            
+            {localStorage.getItem('lang') === null && "Volunteering"}
+            {localStorage.getItem('lang') === 'en' && "Volunteering"}
+            {localStorage.getItem('lang') === 'chi' && "志愿服务"}
+            {localStorage.getItem('lang') === 'spa' && "Trabajar como voluntario"}
+          </h1>
         </div>
         <div class="">
           <br></br>
           <div class="box">
-            <h1 class="title is-3">Available Events</h1>
+            <h1 class="title is-3">              
+              {localStorage.getItem('lang') === null && "Available Events"}
+              {localStorage.getItem('lang') === 'en' && "Available Events"}
+              {localStorage.getItem('lang') === 'chi' && "可用活动"}
+              {localStorage.getItem('lang') === 'spa' && "Eventos disponibles"}
+            </h1>
           </div>
           <div class="columns is-centered">
             <div class="column">
               <div class="box">
                 <div class="notification">
-                  <div class="title is-4">Crystal Cove State Beach Clean Up</div>
-                  <div className="has-text-weight-medium">Beach clean up event.</div>
-                  <br></br>
-                  Date: Friday May 21st, 2021
-                  <br></br>
-                  Time: 7:00 AM PST
+                  <div class="title is-4">                    
+                    {localStorage.getItem('lang') === null && "Crystal Cove State Beach Clean Up"}
+                    {localStorage.getItem('lang') === 'en' && "Crystal Cove State Beach Clean Up"}
+                    {localStorage.getItem('lang') === 'chi' && "水晶湾州立海滩清理"}
+                    {localStorage.getItem('lang') === 'spa' && "Limpieza de la playa estatal de Crystal Cove"}
+                  </div>
+                  <div className="has-text-weight-medium">                    
+                    {localStorage.getItem('lang') === null && "Beach clean up event."}
+                    {localStorage.getItem('lang') === 'en' && "Beach clean up event."}
+                    {localStorage.getItem('lang') === 'chi' && "海滩清理活动。"}
+                    {localStorage.getItem('lang') === 'spa' && "Evento de limpieza de playa."}
+                  </div>
+                  <br></br>                  
+                  {localStorage.getItem('lang') === null && "Date: Friday May 21st, 2021"}
+                  {localStorage.getItem('lang') === 'en' && "Date: Friday May 21st, 2021"}
+                  {localStorage.getItem('lang') === 'chi' && "日期：2021年5月21日，星期五"}
+                  {localStorage.getItem('lang') === 'spa' && "Fecha: 21 de mayo de 2021"}
+                  <br></br>                  
+                  {localStorage.getItem('lang') === null && "Time: 7:00 AM PST"}
+                  {localStorage.getItem('lang') === 'en' && "Time: 7:00 AM PST"}
+                  {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午7:00"}
+                  {localStorage.getItem('lang') === 'spa' && "Hora: 7:00 AM PST"}
                   <br></br>
                   <div class="level">
                     <div class="level-item has-text-centered">
@@ -113,20 +139,46 @@ class Volunteer extends React.Component {
                 </div>
                 {
                   localStorage.getItem("event1") == "true" ?
-                  <button class="button is-info" onClick={this.addEvent1} disabled>Join Event #1</button> :
-                  <button class="button is-info" onClick={this.addEvent1}>Join Event #1</button>
+                  <button class="button is-info" onClick={this.addEvent1} disabled>                    
+                    {localStorage.getItem('lang') === null && "Join Event #1"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #1"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃1"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #1"}
+                  </button> :
+                  <button class="button is-info" onClick={this.addEvent1}>
+                    {localStorage.getItem('lang') === null && "Join Event #1"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #1"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃1"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #1"}
+                  </button>
                 }
               </div>
             </div>
             <div class="column">
               <div class="box">
                 <div class="notification">
-                  <div class="title is-4">Tree Planting Event</div>
-                    <div className="has-text-weight-medium">Help plant trees.</div>
-                    <br></br>
-                    Date: Saturday May 22nd, 2021
-                    <br></br>
-                    Time: 9:00 AM PST
+                  <div class="title is-4">                    
+                    {localStorage.getItem('lang') === null && "Tree Planting Event"}
+                    {localStorage.getItem('lang') === 'en' && "Tree Planting Event"}
+                    {localStorage.getItem('lang') === 'chi' && "植树活动"}
+                    {localStorage.getItem('lang') === 'spa' && "Evento de plantación de árboles"}
+                  </div>
+                    <div className="has-text-weight-medium">                      
+                      {localStorage.getItem('lang') === null && "Help plant trees."}
+                      {localStorage.getItem('lang') === 'en' && "Help plant trees."}
+                      {localStorage.getItem('lang') === 'chi' && "帮助种树。"}
+                      {localStorage.getItem('lang') === 'spa' && "Ayuda a plantar árboles."}
+                    </div>
+                    <br></br>                    
+                    {localStorage.getItem('lang') === null && "Date: Saturday May 22nd, 2021"}
+                    {localStorage.getItem('lang') === 'en' && "Date: Saturday May 22nd, 2021"}
+                    {localStorage.getItem('lang') === 'chi' && "日期：2021年5月22日，星期六"}
+                    {localStorage.getItem('lang') === 'spa' && "Fecha: sábado 22 de mayo de 2021"}
+                    <br></br>                    
+                    {localStorage.getItem('lang') === null && "Time: 9:00 AM PST"}
+                    {localStorage.getItem('lang') === 'en' && "Time: 9:00 AM PST"}
+                    {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午9:00"}
+                    {localStorage.getItem('lang') === 'spa' && "Hora: 9:00 AM PST"}
                     <br></br>
                     <div class="level">
                       <div class="level-item has-text-centered">
@@ -136,8 +188,18 @@ class Volunteer extends React.Component {
                 </div>
                 {
                   localStorage.getItem("event2") == "true" ?
-                  <button class="button is-info" onClick={this.addEvent2} disabled>Join Event #2</button> :
-                  <button class="button is-info" onClick={this.addEvent2}>Join Event #2</button>
+                  <button class="button is-info" onClick={this.addEvent2} disabled>
+                    {localStorage.getItem('lang') === null && "Join Event #2"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #2"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃2"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #2"}
+                  </button> :
+                  <button class="button is-info" onClick={this.addEvent2}>
+                    {localStorage.getItem('lang') === null && "Join Event #2"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #2"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃2"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #2"}
+                  </button>
                 }
               </div>
             </div>
@@ -148,12 +210,28 @@ class Volunteer extends React.Component {
             <div class="column">
               <div class="box">
                 <div class="notification">
-                  <div class="title is-4">Create Downtown Fullerton Community Garden</div>
-                  <div className="has-text-weight-medium">Help create a community garden in Downtown Fullerton.</div>
-                  <br></br>
-                  Date: Wednesday June 2nd, 2021
-                  <br></br>
-                  Time: 10:00 AM PST
+                  <div class="title is-4">                    
+                    {localStorage.getItem('lang') === null && "Create Downtown Fullerton Community Garden"}
+                    {localStorage.getItem('lang') === 'en' && "Create Downtown Fullerton Community Garden"}
+                    {localStorage.getItem('lang') === 'chi' && "创建富乐顿市区社区花园"}
+                    {localStorage.getItem('lang') === 'spa' && "Crear jardín comunitario en el centro de Fullerton"}
+                  </div>
+                  <div className="has-text-weight-medium">                    
+                    {localStorage.getItem('lang') === null && "Help create a community garden in Downtown Fullerton."}
+                    {localStorage.getItem('lang') === 'en' && "Help create a community garden in Downtown Fullerton."}
+                    {localStorage.getItem('lang') === 'chi' && "帮助在富勒顿市中心创建社区花园。"}
+                    {localStorage.getItem('lang') === 'spa' && "Ayude a crear un jardín comunitario en el centro de Fullerton."}
+                  </div>
+                  <br></br>                  
+                  {localStorage.getItem('lang') === null && "Date: Wednesday June 2nd, 2021"}
+                  {localStorage.getItem('lang') === 'en' && "Date: Wednesday June 2nd, 2021"}
+                  {localStorage.getItem('lang') === 'chi' && "日期：2021年6月2日，星期三"}
+                  {localStorage.getItem('lang') === 'spa' && "Fecha: 2 de junio de 2021"}
+                  <br></br>                  
+                  {localStorage.getItem('lang') === null && "Time: 10:00 AM PST"}
+                  {localStorage.getItem('lang') === 'en' && "Time: 10:00 AM PST"}
+                  {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午10:00"}
+                  {localStorage.getItem('lang') === 'spa' && "Hora: 10:00 AM PST"}
                   <br></br>
                   <div class="level">
                     <div class="level-item has-text-centered">
@@ -163,8 +241,18 @@ class Volunteer extends React.Component {
                 </div>
                 {
                   localStorage.getItem("event3") == "true" ?
-                  <button class="button is-info" onClick={this.addEvent3} disabled>Join Event #3</button> :
-                  <button class="button is-info" onClick={this.addEvent3}>Join Event #3</button>
+                  <button class="button is-info" onClick={this.addEvent3} disabled>
+                    {localStorage.getItem('lang') === null && "Join Event #3"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #3"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃3"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #3"}
+                  </button> :
+                  <button class="button is-info" onClick={this.addEvent3}>
+                    {localStorage.getItem('lang') === null && "Join Event #3"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #3"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃3"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #3"}
+                  </button>
                 }
               </div>
               
@@ -172,12 +260,29 @@ class Volunteer extends React.Component {
             <div class="column">
               <div class="box">
                 <div class="notification">
-                <div class="title is-4">Santa Ana River Waterways Cleanup</div>
-                    <div className="has-text-weight-medium">Help clean up the Santa Ana River waterways.</div>
-                    <br></br>
-                    Date: Saturday June 5th, 2021
-                    <br></br>
-                    Time: 6:00 AM PST
+                <div class="title is-4">
+                  
+                  {localStorage.getItem('lang') === null && "Santa Ana River Waterways Cleanup"}
+                  {localStorage.getItem('lang') === 'en' && "Santa Ana River Waterways Cleanup"}
+                  {localStorage.getItem('lang') === 'chi' && "圣安娜河水道清理"}
+                  {localStorage.getItem('lang') === 'spa' && "Limpieza de las vías fluviales del río Santa Ana"}
+                </div>
+                    <div className="has-text-weight-medium">                      
+                      {localStorage.getItem('lang') === null && "Help clean up the Santa Ana River waterways."}
+                      {localStorage.getItem('lang') === 'en' && "Help clean up the Santa Ana River waterways."}
+                      {localStorage.getItem('lang') === 'chi' && "帮助清理圣安娜河水道。"}
+                      {localStorage.getItem('lang') === 'spa' && "Ayude a limpiar las vías fluviales del río Santa Ana."}
+                    </div>
+                    <br></br>                   
+                    {localStorage.getItem('lang') === null && "Date: Saturday June 5th, 2021"}
+                    {localStorage.getItem('lang') === 'en' && "Date: Saturday June 5th, 2021"}
+                    {localStorage.getItem('lang') === 'chi' && "日期：2021年6月5日，星期六"}
+                    {localStorage.getItem('lang') === 'spa' && "Fecha: sábado 5 de junio de 2021"}
+                    <br></br>                    
+                    {localStorage.getItem('lang') === null && "Time: 6:00 AM PST"}
+                    {localStorage.getItem('lang') === 'en' && "Time: 6:00 AM PST"}
+                    {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午6:00"}
+                    {localStorage.getItem('lang') === 'spa' && "Hora: 6:00 AM PST"}
                     <br></br>
                     <div class="level">
                       <div class="level-item has-text-centered">
@@ -187,8 +292,18 @@ class Volunteer extends React.Component {
                 </div>
                 {
                   localStorage.getItem("event4") == "true" ?
-                  <button class="button is-info" onClick={this.addEvent4} disabled>Join Event #4</button> :
-                  <button class="button is-info" onClick={this.addEvent4}>Join Event #4</button>
+                  <button class="button is-info" onClick={this.addEvent4} disabled>
+                    {localStorage.getItem('lang') === null && "Join Event #4"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #4"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃4"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #4"}
+                  </button> :
+                  <button class="button is-info" onClick={this.addEvent4}>
+                    {localStorage.getItem('lang') === null && "Join Event #4"}
+                    {localStorage.getItem('lang') === 'en' && "Join Event #4"}
+                    {localStorage.getItem('lang') === 'chi' && "加入活动＃4"}
+                    {localStorage.getItem('lang') === 'spa' && "Únirse al evento #4"}
+                  </button>
                 }
               </div>
               
@@ -200,7 +315,12 @@ class Volunteer extends React.Component {
 
         <div class="">
           <div class="box">
-            <h1 class="title is-3">Attending Events:</h1>
+            <h1 class="title is-3">              
+              {localStorage.getItem('lang') === null && "Attending Events:"}
+              {localStorage.getItem('lang') === 'en' && "Attending Events:"}
+              {localStorage.getItem('lang') === 'chi' && "参加活动："}
+              {localStorage.getItem('lang') === 'spa' && "Asistiendo a eventos:"}
+            </h1>
           </div>
           <div class="columns is-centered">
               <div class="column is-half">
@@ -208,12 +328,28 @@ class Volunteer extends React.Component {
                   localStorage.getItem("event1") == "true" ?
                   <div class="box">
                     <div class="notification">
-                      <div class="title is-4">Crystal Cove State Beach Clean Up</div>
-                      <div className="has-text-weight-medium">Beach clean up event.</div>
+                      <div class="title is-4">
+                        {localStorage.getItem('lang') === null && "Crystal Cove State Beach Clean Up"}
+                        {localStorage.getItem('lang') === 'en' && "Crystal Cove State Beach Clean Up"}
+                        {localStorage.getItem('lang') === 'chi' && "水晶湾州立海滩清理"}
+                        {localStorage.getItem('lang') === 'spa' && "Limpieza de la playa estatal de Crystal Cove"}
+                      </div>
+                      <div className="has-text-weight-medium">
+                      {localStorage.getItem('lang') === null && "Beach clean up event."}
+                      {localStorage.getItem('lang') === 'en' && "Beach clean up event."}
+                      {localStorage.getItem('lang') === 'chi' && "海滩清理活动。"}
+                      {localStorage.getItem('lang') === 'spa' && "Evento de limpieza de playa."}
+                      </div>
                       <br></br>
-                      Date: Friday May 21st, 2021
+                      {localStorage.getItem('lang') === null && "Date: Friday May 21st, 2021"}
+                      {localStorage.getItem('lang') === 'en' && "Date: Friday May 21st, 2021"}
+                      {localStorage.getItem('lang') === 'chi' && "日期：2021年5月21日，星期五"}
+                      {localStorage.getItem('lang') === 'spa' && "Fecha: 21 de mayo de 2021"}
                       <br></br>
-                      Time: 7:00 AM PST
+                      {localStorage.getItem('lang') === null && "Time: 7:00 AM PST"}
+                      {localStorage.getItem('lang') === 'en' && "Time: 7:00 AM PST"}
+                      {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午7:00"}
+                      {localStorage.getItem('lang') === 'spa' && "Hora: 7:00 AM PST"}
                       <br></br>
                       <div class="level">
                         <div class="level-item has-text-centered">
@@ -221,9 +357,17 @@ class Volunteer extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <button class="button is-danger" onClick={this.removeEvent1}>Leave Event #1</button>
-                    <br></br>
-                    Current attendees:
+                    <button class="button is-danger" onClick={this.removeEvent1}>                      
+                      {localStorage.getItem('lang') === null && "Leave Event #1"}
+                      {localStorage.getItem('lang') === 'en' && "Leave Event #1"}
+                      {localStorage.getItem('lang') === 'chi' && "离开事件1"}
+                      {localStorage.getItem('lang') === 'spa' && "Salir del evento #1"}
+                    </button>
+                    <br></br>                    
+                    {localStorage.getItem('lang') === null && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'en' && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'chi' && "当前参加者："}
+                    {localStorage.getItem('lang') === 'spa' && "Asistentes actuales:"}
                     <br></br>
                     {Auth.user.username}
                   </div> : ""
@@ -232,12 +376,28 @@ class Volunteer extends React.Component {
                   localStorage.getItem("event2") == "true" ?
                   <div class="box">
                     <div class="notification">
-                      <div class="title is-4">Tree Planting Event</div>
-                      <div className="has-text-weight-medium">Help plant trees.</div>
+                      <div class="title is-4">
+                      {localStorage.getItem('lang') === null && "Tree Planting Event"}
+                      {localStorage.getItem('lang') === 'en' && "Tree Planting Event"}
+                      {localStorage.getItem('lang') === 'chi' && "植树活动"}
+                      {localStorage.getItem('lang') === 'spa' && "Evento de plantación de árboles"}
+                      </div>
+                      <div className="has-text-weight-medium">
+                      {localStorage.getItem('lang') === null && "Help plant trees."}
+                      {localStorage.getItem('lang') === 'en' && "Help plant trees."}
+                      {localStorage.getItem('lang') === 'chi' && "帮助种树。"}
+                      {localStorage.getItem('lang') === 'spa' && "Ayuda a plantar árboles."}
+                      </div>
                       <br></br>
-                      Date: Saturday May 22nd, 2021
+                      {localStorage.getItem('lang') === null && "Date: Saturday May 22nd, 2021"}
+                      {localStorage.getItem('lang') === 'en' && "Date: Saturday May 22nd, 2021"}
+                      {localStorage.getItem('lang') === 'chi' && "日期：2021年5月22日，星期六"}
+                      {localStorage.getItem('lang') === 'spa' && "Fecha: sábado 22 de mayo de 2021"}
                       <br></br>
-                      Time: 9:00 AM PST
+                      {localStorage.getItem('lang') === null && "Time: 9:00 AM PST"}
+                      {localStorage.getItem('lang') === 'en' && "Time: 9:00 AM PST"}
+                      {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午9:00"}
+                      {localStorage.getItem('lang') === 'spa' && "Hora: 9:00 AM PST"}
                       <br></br>
                       <div class="level">
                         <div class="level-item has-text-centered">
@@ -245,9 +405,17 @@ class Volunteer extends React.Component {
                         </div>
                       </div>
                     </div>
-                    <button class="button is-danger" onClick={this.removeEvent2}>Leave Event #2</button>
+                    <button class="button is-danger" onClick={this.removeEvent2}>
+                      {localStorage.getItem('lang') === null && "Leave Event #2"}
+                      {localStorage.getItem('lang') === 'en' && "Leave Event #2"}
+                      {localStorage.getItem('lang') === 'chi' && "离开事件2"}
+                      {localStorage.getItem('lang') === 'spa' && "Salir del evento #2"}
+                    </button>
                     <br></br>
-                    Current attendees:
+                    {localStorage.getItem('lang') === null && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'en' && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'chi' && "当前参加者："}
+                    {localStorage.getItem('lang') === 'spa' && "Asistentes actuales:"}
                     <br></br>
                     {Auth.user.username}
                   </div> : ""
@@ -256,12 +424,28 @@ class Volunteer extends React.Component {
                   localStorage.getItem("event3") == "true" ?
                   <div class="box">
                     <div class="notification">
-                    <div class="title is-4">Create Downtown Fullerton Community Garden</div>
-                      <div className="has-text-weight-medium">Help create a community garden in Downtown Fullerton.</div>
+                    <div class="title is-4">
+                    {localStorage.getItem('lang') === null && "Create Downtown Fullerton Community Garden"}
+                    {localStorage.getItem('lang') === 'en' && "Create Downtown Fullerton Community Garden"}
+                    {localStorage.getItem('lang') === 'chi' && "创建富乐顿市区社区花园"}
+                    {localStorage.getItem('lang') === 'spa' && "Crear jardín comunitario en el centro de Fullerton"}
+                    </div>
+                      <div className="has-text-weight-medium">
+                      {localStorage.getItem('lang') === null && "Help create a community garden in Downtown Fullerton."}
+                      {localStorage.getItem('lang') === 'en' && "Help create a community garden in Downtown Fullerton."}
+                      {localStorage.getItem('lang') === 'chi' && "帮助在富勒顿市中心创建社区花园。"}
+                      {localStorage.getItem('lang') === 'spa' && "Ayude a crear un jardín comunitario en el centro de Fullerton."}
+                      </div>
                       <br></br>
-                      Date: Wednesday June 2nd, 2021
+                      {localStorage.getItem('lang') === null && "Date: Wednesday June 2nd, 2021"}
+                      {localStorage.getItem('lang') === 'en' && "Date: Wednesday June 2nd, 2021"}
+                      {localStorage.getItem('lang') === 'chi' && "日期：2021年6月2日，星期三"}
+                      {localStorage.getItem('lang') === 'spa' && "Fecha: 2 de junio de 2021"}
                       <br></br>
-                      Time: 10:00 AM PST
+                      {localStorage.getItem('lang') === null && "Time: 10:00 AM PST"}
+                      {localStorage.getItem('lang') === 'en' && "Time: 10:00 AM PST"}
+                      {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午10:00"}
+                      {localStorage.getItem('lang') === 'spa' && "Hora: 10:00 AM PST"}
                       <br></br>
                       <div class="level">
                       <div class="level-item has-text-centered">
@@ -269,9 +453,17 @@ class Volunteer extends React.Component {
                       </div>
                       </div>
                     </div>
-                    <button class="button is-danger" onClick={this.removeEvent3}>Leave Event #3</button>
+                    <button class="button is-danger" onClick={this.removeEvent3}>
+                      {localStorage.getItem('lang') === null && "Leave Event #3"}
+                      {localStorage.getItem('lang') === 'en' && "Leave Event #3"}
+                      {localStorage.getItem('lang') === 'chi' && "离开事件3"}
+                      {localStorage.getItem('lang') === 'spa' && "Salir del evento #3"}
+                    </button>
                     <br></br>
-                    Current attendees:
+                    {localStorage.getItem('lang') === null && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'en' && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'chi' && "当前参加者："}
+                    {localStorage.getItem('lang') === 'spa' && "Asistentes actuales:"}
                     <br></br>
                     {Auth.user.username}
                   </div> : ""
@@ -280,12 +472,28 @@ class Volunteer extends React.Component {
                   localStorage.getItem("event4") == "true" ?
                   <div class="box">
                     <div class="notification">
-                      <div class="title is-4">Santa Ana River Waterways Cleanup</div>
-                      <div className="has-text-weight-medium">Help clean up the Santa Ana River waterways.</div>
+                      <div class="title is-4">
+                      {localStorage.getItem('lang') === null && "Santa Ana River Waterways Cleanup"}
+                      {localStorage.getItem('lang') === 'en' && "Santa Ana River Waterways Cleanup"}
+                      {localStorage.getItem('lang') === 'chi' && "圣安娜河水道清理"}
+                      {localStorage.getItem('lang') === 'spa' && "Limpieza de las vías fluviales del río Santa Ana"}
+                      </div>
+                      <div className="has-text-weight-medium">
+                      {localStorage.getItem('lang') === null && "Help clean up the Santa Ana River waterways."}
+                      {localStorage.getItem('lang') === 'en' && "Help clean up the Santa Ana River waterways."}
+                      {localStorage.getItem('lang') === 'chi' && "帮助清理圣安娜河水道。"}
+                      {localStorage.getItem('lang') === 'spa' && "Ayude a limpiar las vías fluviales del río Santa Ana."}
+                      </div>
                       <br></br>
-                      Date: Saturday June 5th, 2021
+                      {localStorage.getItem('lang') === null && "Date: Saturday June 5th, 2021"}
+                      {localStorage.getItem('lang') === 'en' && "Date: Saturday June 5th, 2021"}
+                      {localStorage.getItem('lang') === 'chi' && "日期：2021年6月5日，星期六"}
+                      {localStorage.getItem('lang') === 'spa' && "Fecha: sábado 5 de junio de 2021"}
                       <br></br>
-                      Time: 6:00 AM PST
+                      {localStorage.getItem('lang') === null && "Time: 6:00 AM PST"}
+                      {localStorage.getItem('lang') === 'en' && "Time: 6:00 AM PST"}
+                      {localStorage.getItem('lang') === 'chi' && "时间：太平洋标准时间上午6:00"}
+                      {localStorage.getItem('lang') === 'spa' && "Hora: 6:00 AM PST"}
                       <br></br>
                       <div class="level">
                         <div class="level-item has-text-centered">
@@ -293,9 +501,17 @@ class Volunteer extends React.Component {
                         </div>
                         </div>
                     </div>
-                    <button class="button is-danger" onClick={this.removeEvent4}>Leave Event #4</button>
+                    <button class="button is-danger" onClick={this.removeEvent4}>
+                      {localStorage.getItem('lang') === null && "Leave Event #4"}
+                      {localStorage.getItem('lang') === 'en' && "Leave Event #4"}
+                      {localStorage.getItem('lang') === 'chi' && "离开事件4"}
+                      {localStorage.getItem('lang') === 'spa' && "Salir del evento #4"}
+                    </button>
                     <br></br>
-                    Current attendees:
+                    {localStorage.getItem('lang') === null && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'en' && "Current attendees:"}
+                    {localStorage.getItem('lang') === 'chi' && "当前参加者："}
+                    {localStorage.getItem('lang') === 'spa' && "Asistentes actuales:"}
                     <br></br>
                     {Auth.user.username}
                   </div> : ""

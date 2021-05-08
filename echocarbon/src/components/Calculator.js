@@ -28,10 +28,19 @@ class Calculator extends React.Component {
         <header className="">
         <div class="container is-widescreen">
           <div class="notification is-success">
-            <div class="title is-1">Carbon Footprint Calculator</div>
+            <div class="title is-1">
+              {localStorage.getItem('lang') === null && "Carbon Footprint Calculator"}
+              {localStorage.getItem('lang') === 'en' && "Carbon Footprint Calculator"}
+              {localStorage.getItem('lang') === 'chi' && "碳足迹计算器"}
+              {localStorage.getItem('lang') === 'spa' && "Calculadora de Huella de Carbono"}
+            </div>
               <article class="message is-success">
                 <div class="message-body">
-                  Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits.
+                  
+                  {localStorage.getItem('lang') === null && "Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits."}
+                  {localStorage.getItem('lang') === 'en' && "Hello! Welcome to our carbon footprint calculator. Please enter the following information about your driving habits."}
+                  {localStorage.getItem('lang') === 'chi' && "你好！欢迎使用我们的碳足迹计算器。请输入以下有关您的驾驶习惯的信息"}
+                  {localStorage.getItem('lang') === 'spa' && "¡Hola! Bienvenido a nuestra calculadora de huella de carbono. Introduzca la siguiente información sobre sus hábitos de conducción."}
                 </div>
               </article>
               {/* <Login />

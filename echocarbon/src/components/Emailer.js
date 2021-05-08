@@ -22,18 +22,34 @@ export default function Emailer() {
     return(
     <div>
             <br></br>
-            <div class="title is-1">Carbon Footprint Report & Goal Setter</div>
+            <div class="title is-1">                
+                {localStorage.getItem('lang') === null && "Carbon Footprint Report & Goal Setter"}
+                {localStorage.getItem('lang') === 'en' && "Carbon Footprint Report & Goal Setter"}
+                {localStorage.getItem('lang') === 'chi' && "碳足迹报告和目标设定者"}
+                {localStorage.getItem('lang') === 'spa' && "Informe de huella de carbono y establecimiento de objetivos"}
+            </div>
         <form onSubmit={sendEmail}>
 
             <div class="field">
-                <label class="label">Name</label>
+                <label class="label">
+                    
+                    {localStorage.getItem('lang') === null && "Name"}
+                    {localStorage.getItem('lang') === 'en' && "Name"}
+                    {localStorage.getItem('lang') === 'chi' && "名称"}
+                    {localStorage.getItem('lang') === 'spa' && "Nombre"}
+                </label>
                 <div class="control">
                     <input className="form-control has-text-centered input" type="text" name="name" placeholder="Name" />
                 </div>
             </div>
 
             <div class="field">
-                <label class="label">Email</label>
+                <label class="label">                    
+                    {localStorage.getItem('lang') === null && "Email"}
+                    {localStorage.getItem('lang') === 'en' && "Email"}
+                    {localStorage.getItem('lang') === 'chi' && "电子邮件"}
+                    {localStorage.getItem('lang') === 'spa' && "Correo Electronico"}
+                </label>
                 <div class="control has-icons-left has-icons-right">
                     <input className="form-control has-text-centered input" type="email" placeholder="Email Address" defaultValue="" name="email"/>
                     <span class="icon is-small is-left">
@@ -46,7 +62,12 @@ export default function Emailer() {
             </div>
 
             <div class="field">
-                <label class="label">Carbon Emission Goal</label>
+                <label class="label">                    
+                    {localStorage.getItem('lang') === null && "Carbon Emission Goal"}
+                    {localStorage.getItem('lang') === 'en' && "Carbon Emission Goal"}
+                    {localStorage.getItem('lang') === 'chi' && "碳排放目标"}
+                    {localStorage.getItem('lang') === 'spa' && "Objetivo de emisión de carbono"}
+                </label>
                 <div class="control">
                     {/* <textarea className="form-control has-text-centered textarea" id="" cols="30" rows="8" placeholder="Message" name = "message" defaultValue=" My personal goal on my Carbon Emission score is: 
                       Personal Notes: 
@@ -56,7 +77,12 @@ export default function Emailer() {
             </div>
 
             <div class="field">
-                <label class="label">Carbon Emission Report</label>
+                <label class="label">                    
+                    {localStorage.getItem('lang') === null && "Carbon Emission Report"}
+                    {localStorage.getItem('lang') === 'en' && "Carbon Emission Report"}
+                    {localStorage.getItem('lang') === 'chi' && "碳排放报告"}
+                    {localStorage.getItem('lang') === 'spa' && "Informe de emisiones de carbono"}
+                </label>
                 <div class="control">
                     <input class="input" type="text" placeholder="Disabled input" name = "carbon" value={"The amount of carbon released based off your weekly driving habits is " + localStorage.getItem("carbonNumber") + "."}/>
                 </div>

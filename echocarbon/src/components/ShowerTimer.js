@@ -76,7 +76,16 @@ function MyTimer({ expiryTimestamp }) {
       </div> */}
       <div>
         <div class="title is-4">
-          <div className="is-family-code">{minutes}</div> minutes <div className="is-family-code">{seconds}</div> seconds
+          <div className="is-family-code">{minutes}</div>            
+            {localStorage.getItem('lang') === null && "minutes"}
+            {localStorage.getItem('lang') === 'en' && "minutes"}
+            {localStorage.getItem('lang') === 'chi' && "分钟"}
+            {localStorage.getItem('lang') === 'spa' && "minutos"}
+            <div className="is-family-code">{seconds}</div>             
+            {localStorage.getItem('lang') === null && "seconds"}
+            {localStorage.getItem('lang') === 'en' && "seconds"}
+            {localStorage.getItem('lang') === 'chi' && "秒"}
+            {localStorage.getItem('lang') === 'spa' && "segundos"}
         </div>
       </div>
       <br></br>
@@ -87,7 +96,12 @@ function MyTimer({ expiryTimestamp }) {
             <button class="button is-info" onClick={(handleDecreaseOnClick)}>-</button>   
           </div>
           <div class="control">
-            <div class="button is-outlined">{showerMinutes} Minutes</div>
+            <div class="button is-outlined">{showerMinutes} 
+            {localStorage.getItem('lang') === null && " Minutes"}
+            {localStorage.getItem('lang') === 'en' && " Minutes"}
+            {localStorage.getItem('lang') === 'chi' && "分钟"}
+            {localStorage.getItem('lang') === 'spa' && " Minutos"}
+            </div>
           </div>
           <div class="control">
             <button class="button is-info" onClick={() => setshowerMinutes(showerMinutes + 1)}>+</button>
@@ -105,13 +119,28 @@ function MyTimer({ expiryTimestamp }) {
           const time = new Date();
           time.setSeconds(time.getSeconds() + showerMinutes*60);
           restart(time)
-          }}>Start</button>
+          }}>            
+            {localStorage.getItem('lang') === null && "Start"}
+            {localStorage.getItem('lang') === 'en' && "Start"}
+            {localStorage.getItem('lang') === 'chi' && "开始"}
+            {localStorage.getItem('lang') === 'spa' && "Comienzo"}
+          </button>
         </div>
         <div class="column">
-          <button class="button is-info" onClick={pause}>Pause</button>
+          <button class="button is-info" onClick={pause}>            
+            {localStorage.getItem('lang') === null && "Pause"}
+            {localStorage.getItem('lang') === 'en' && "Pause"}
+            {localStorage.getItem('lang') === 'chi' && "暂停"}
+            {localStorage.getItem('lang') === 'spa' && "Pausa"}
+          </button>
         </div>
         <div class="column">
-          <button class="button is-info" onClick={resume}>Resume</button>
+          <button class="button is-info" onClick={resume}>            
+            {localStorage.getItem('lang') === null && "Resume"}
+            {localStorage.getItem('lang') === 'en' && "Resume"}
+            {localStorage.getItem('lang') === 'chi' && "恢复"}
+            {localStorage.getItem('lang') === 'spa' && "Reanudar"}
+          </button>
         </div>
       </div>
     </div>
@@ -144,14 +173,29 @@ class ShowerTimer extends React.Component {
     return (
       <div>
         <div class="box">
-            <h1 class="title is-1">Track Your Shower</h1>
-            <h1 class="title is-4">Stop taking long showers!</h1>
+            <h1 class="title is-1">              
+              {localStorage.getItem('lang') === null && "Track Your Shower"}
+              {localStorage.getItem('lang') === 'en' && "Track Your Shower"}
+              {localStorage.getItem('lang') === 'chi' && "追踪淋浴"}
+              {localStorage.getItem('lang') === 'spa' && "Seguimiento de su ducha"}
+            </h1>
+            <h1 class="title is-4">              
+              {localStorage.getItem('lang') === null && "Stop taking long showers!"}
+              {localStorage.getItem('lang') === 'en' && "Stop taking long showers!"}
+              {localStorage.getItem('lang') === 'chi' && "停止长时间淋浴！"}
+              {localStorage.getItem('lang') === 'spa' && "¡Deja de tomar duchas largas!"}
+            </h1>
         </div>
         <div>
           <div class="columns is-centered">
             <div class="column is-half">
               <div className="box">
-                <div class="title is-3">Stopwatch</div>
+                <div class="title is-3">                  
+                  {localStorage.getItem('lang') === null && "Stopwatch"}
+                  {localStorage.getItem('lang') === 'en' && "Stopwatch"}
+                  {localStorage.getItem('lang') === 'chi' && "跑表"}
+                  {localStorage.getItem('lang') === 'spa' && "Cronógrafo"}
+                </div>
                 <Timer
                   initialTime={0}
                   startImmediately={false}>
@@ -159,26 +203,60 @@ class ShowerTimer extends React.Component {
                     <React.Fragment>
                       <div>
                         <div class="title is-4">
-                          <div className="is-family-code"><Timer.Minutes /></div> minutes <div className="is-family-code"><Timer.Seconds /></div> seconds
+                          <div className="is-family-code"><Timer.Minutes /></div> 
+                          {localStorage.getItem('lang') === null && "minutes"}
+                          {localStorage.getItem('lang') === 'en' && "minutes"}
+                          {localStorage.getItem('lang') === 'chi' && "分钟"}
+                          {localStorage.getItem('lang') === 'spa' && "minutos"} 
+                          <div className="is-family-code"><Timer.Seconds /></div> 
+                          {localStorage.getItem('lang') === null && "seconds"}
+                          {localStorage.getItem('lang') === 'en' && "seconds"}
+                          {localStorage.getItem('lang') === 'chi' && "秒"}
+                          {localStorage.getItem('lang') === 'spa' && "segundos"}
                         </div>
                       </div>
                       {/* <div>{timerState}</div> */}
                       <br />
                       <div class="columns is-centered">
                           <div class="column">
-                            <button class="button is-info" onClick={start}>Start</button>
+                            <button class="button is-info" onClick={start}>
+                            {localStorage.getItem('lang') === null && "Start"}
+                            {localStorage.getItem('lang') === 'en' && "Start"}
+                            {localStorage.getItem('lang') === 'chi' && "开始"}
+                            {localStorage.getItem('lang') === 'spa' && "Comienzo"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={pause}>Pause</button>
+                            <button class="button is-info" onClick={pause}>
+                            {localStorage.getItem('lang') === null && "Pause"}
+                            {localStorage.getItem('lang') === 'en' && "Pause"}
+                            {localStorage.getItem('lang') === 'chi' && "暂停"}
+                            {localStorage.getItem('lang') === 'spa' && "Pausa"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={resume}>Resume</button>
+                            <button class="button is-info" onClick={resume}>
+                            {localStorage.getItem('lang') === null && "Resume"}
+                            {localStorage.getItem('lang') === 'en' && "Resume"}
+                            {localStorage.getItem('lang') === 'chi' && "恢复"}
+                            {localStorage.getItem('lang') === 'spa' && "Reanudar"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={stop}>Stop</button>
+                            <button class="button is-info" onClick={stop}>                              
+                              {localStorage.getItem('lang') === null && "Stop"}
+                              {localStorage.getItem('lang') === 'en' && "Stop"}
+                              {localStorage.getItem('lang') === 'chi' && "停止"}
+                              {localStorage.getItem('lang') === 'spa' && "Detener"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={reset}>Reset</button>
+                            <button class="button is-info" onClick={reset}>                              
+                              {localStorage.getItem('lang') === null && "Reset"}
+                              {localStorage.getItem('lang') === 'en' && "Reset"}
+                              {localStorage.getItem('lang') === 'chi' && "重启"}
+                              {localStorage.getItem('lang') === 'spa' && "Reiniciar"}
+                            </button>
                           </div>
                         </div>
                     </React.Fragment>
@@ -192,7 +270,12 @@ class ShowerTimer extends React.Component {
           <div class="columns is-centered">
             <div class="column is-half">
               <div className="box">
-                <div class="title is-3">Custom Timer</div>
+                <div class="title is-3">                  
+                  {localStorage.getItem('lang') === null && "Custom Timer"}
+                  {localStorage.getItem('lang') === 'en' && "Custom Timer"}
+                  {localStorage.getItem('lang') === 'chi' && "自定义计时器"}
+                  {localStorage.getItem('lang') === 'spa' && "Temporizador personalizado"}
+                </div>
                 <MyTimer/>
               </div>
             </div>
@@ -202,7 +285,12 @@ class ShowerTimer extends React.Component {
           <div class="columns is-centered">
             <div class="column is-half">
               <div className="box">
-                <div class="title is-3">5 Minute Timer</div>
+                <div class="title is-3">                  
+                  {localStorage.getItem('lang') === null && "5 Minute Timer"}
+                  {localStorage.getItem('lang') === 'en' && "5 Minute Timer"}
+                  {localStorage.getItem('lang') === 'chi' && "5分钟定时器"}
+                  {localStorage.getItem('lang') === 'spa' && "Temporizador de 5 minutos"}
+                </div>
                 <Timer
                   initialTime={300000}
                   startImmediately={false}
@@ -211,26 +299,60 @@ class ShowerTimer extends React.Component {
                     <React.Fragment>
                       <div>
                         <div class="title is-4">
-                          <div className="is-family-code"><Timer.Minutes /></div> minutes <div className="is-family-code"><Timer.Seconds /></div> seconds
+                          <div className="is-family-code"><Timer.Minutes /></div> 
+                          {localStorage.getItem('lang') === null && "minutes"}
+                          {localStorage.getItem('lang') === 'en' && "minutes"}
+                          {localStorage.getItem('lang') === 'chi' && "分钟"}
+                          {localStorage.getItem('lang') === 'spa' && "minutos"} 
+                          <div className="is-family-code"><Timer.Seconds /></div> 
+                          {localStorage.getItem('lang') === null && "seconds"}
+                          {localStorage.getItem('lang') === 'en' && "seconds"}
+                          {localStorage.getItem('lang') === 'chi' && "秒"}
+                          {localStorage.getItem('lang') === 'spa' && "segundos"}
                         </div>
                       </div>
                       {/* <div>{timerState}</div> */}
                       <br />
                       <div class="columns is-centered">
                           <div class="column">
-                            <button class="button is-info" onClick={start}>Start</button>
+                            <button class="button is-info" onClick={start}>
+                            {localStorage.getItem('lang') === null && "Start"}
+                            {localStorage.getItem('lang') === 'en' && "Start"}
+                            {localStorage.getItem('lang') === 'chi' && "开始"}
+                            {localStorage.getItem('lang') === 'spa' && "Comienzo"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={pause}>Pause</button>
+                            <button class="button is-info" onClick={pause}>
+                            {localStorage.getItem('lang') === null && "Pause"}
+                            {localStorage.getItem('lang') === 'en' && "Pause"}
+                            {localStorage.getItem('lang') === 'chi' && "暂停"}
+                            {localStorage.getItem('lang') === 'spa' && "Pausa"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={resume}>Resume</button>
+                            <button class="button is-info" onClick={resume}>
+                            {localStorage.getItem('lang') === null && "Resume"}
+                            {localStorage.getItem('lang') === 'en' && "Resume"}
+                            {localStorage.getItem('lang') === 'chi' && "恢复"}
+                            {localStorage.getItem('lang') === 'spa' && "Reanudar"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={stop}>Stop</button>
+                            <button class="button is-info" onClick={stop}>
+                            {localStorage.getItem('lang') === null && "Stop"}
+                            {localStorage.getItem('lang') === 'en' && "Stop"}
+                            {localStorage.getItem('lang') === 'chi' && "停止"}
+                            {localStorage.getItem('lang') === 'spa' && "Detener"}
+                            </button>
                           </div>
                           <div class="column">
-                            <button class="button is-info" onClick={reset}>Reset</button>
+                            <button class="button is-info" onClick={reset}>
+                            {localStorage.getItem('lang') === null && "Reset"}
+                            {localStorage.getItem('lang') === 'en' && "Reset"}
+                            {localStorage.getItem('lang') === 'chi' && "重启"}
+                            {localStorage.getItem('lang') === 'spa' && "Reiniciar"}
+                            </button>
                           </div>
                         </div>
                     </React.Fragment>

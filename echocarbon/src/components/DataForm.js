@@ -36,17 +36,33 @@ class EcoTier extends Component {
         <div class="notification is-info"> 
         {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRIC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
                 
-        <br></br>Sorry, you are driving too many miles per week. 
-        <br></br> You put a lot of pollution into the air.
+        <br></br>
+        {localStorage.getItem('lang') === null &&  "Sorry, you are driving too many miles per week. " }
+        {localStorage.getItem('lang') === 'en' &&  "Sorry, you are driving too many miles per week. " }
+        {localStorage.getItem('lang') === 'chi' && "抱歉，您每周行驶的里程过多。" }
+        {localStorage.getItem('lang') === 'spa' && "Lo siento, está conduciendo demasiadas millas por semana." }
+        <br></br> 
+        {localStorage.getItem('lang') === null &&  "You put a lot of pollution into the air." }
+        {localStorage.getItem('lang') === 'en' &&  "You put a lot of pollution into the air." }
+        {localStorage.getItem('lang') === 'chi' && "您向空气中排放了很多污染物。" }
+        {localStorage.getItem('lang') === 'spa' && "Pones mucha contaminación en el aire." }
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week:
+            <br></br>
+            {localStorage.getItem('lang') === null &&  "Kilograms of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'en' &&  "Kilograms of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳千克：" }
+            {localStorage.getItem('lang') === 'spa' && "Kilogramos de CO2 liberados por semana:" }
             <br></br>
             {numGasMetric.toFixed(2) }
             {localStorage.setItem("carbonNumber",  numGasMetric.toFixed(2) + " kg")}
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week:
+            <br></br>
+            {localStorage.getItem('lang') === null &&  "Pounds of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'en' &&  "Pounds of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳磅：" }
+            {localStorage.getItem('lang') === 'spa' && "Libras de CO2 liberadas por semana:" }
             <br></br>
             {numGasImperial.toFixed(2) }
             {localStorage.setItem("carbonNumber", numGasImperial.toFixed(2) + " lbs")}
@@ -63,17 +79,33 @@ class EcoTier extends Component {
         
         {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRIC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
 
-        <br></br>You don't drive that many miles per week. 
-        <br></br> You do not put a lot of pollution into the air. 
+        <br></br> 
+        {localStorage.getItem('lang') === null &&  "You don't drive that many miles per week." }
+        {localStorage.getItem('lang') === 'en' &&  "You don't drive that many miles per week." }
+        {localStorage.getItem('lang') === 'chi' && "您每周不会开车那么多英里。" }
+        {localStorage.getItem('lang') === 'spa' && "No conduce tantas millas por semana." }
+        <br></br> 
+        {localStorage.getItem('lang') === null &&  "You do not put a lot of pollution into the air. " }
+        {localStorage.getItem('lang') === 'en' &&  "You do not put a lot of pollution into the air. " }
+        {localStorage.getItem('lang') === 'chi' && "您不会对空气造成太多污染。" }
+        {localStorage.getItem('lang') === 'spa' && "No echas mucha contaminación al aire." }
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week:
+            <br></br>
+            {localStorage.getItem('lang') === null &&  "Kilograms of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'en' &&  "Kilograms of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳千克：" }
+            {localStorage.getItem('lang') === 'spa' && "Kilogramos de CO2 liberados por semana:" }
             <br></br>
             {numGasMetric.toFixed(2) }
             {localStorage.setItem("carbonNumber",  numGasMetric.toFixed(2) + " kg")}
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week:
+            <br></br>
+            {localStorage.getItem('lang') === null &&  "Pounds of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'en' &&  "Pounds of CO2 released per week:" }
+            {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳磅：" }
+            {localStorage.getItem('lang') === 'spa' && "Libras de CO2 liberadas por semana:" }
             <br></br>
             {numGasImperial.toFixed(2) }
             {localStorage.setItem("carbonNumber", numGasImperial.toFixed(2) + " lbs")}
@@ -88,19 +120,47 @@ class EcoTier extends Component {
     {
       return (
         <div class="notification is-info"> 
-        {this.state.metricChoice ? <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>METRIC</button> : <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>IMPERIAL</button>}
+        {this.state.metricChoice ? 
+          <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>
+            {localStorage.getItem('lang') === null &&  "METRIC" }
+            {localStorage.getItem('lang') === 'en' &&  "METRIC" }
+            {localStorage.getItem('lang') === 'chi' && "公制" }
+            {localStorage.getItem('lang') === 'spa' && "METRICO" }
+          </button> : 
+          <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>
+            {localStorage.getItem('lang') === null &&  "IMPERIAL" }
+            {localStorage.getItem('lang') === 'en' &&  "IMPERIAL" }
+            {localStorage.getItem('lang') === 'chi' && "帝王" }
+            {localStorage.getItem('lang') === 'spa' && "IMPERIAL" }
+          </button>}
                 
-        <br></br>Congrats! You are Earth's best friend. 
-        <br></br> You do not put a lot of pollution into the air. 
+        <br/><br/>
+        {localStorage.getItem('lang') === null &&  "Congrats! You are Earth's best friend." }
+        {localStorage.getItem('lang') === 'en' &&  "Congrats! You are Earth's best friend." }
+        {localStorage.getItem('lang') === 'chi' && "恭喜！您是地球上最好的朋友。" }
+        {localStorage.getItem('lang') === 'spa' && "¡Felicitaciones! Eres el mejor amigo de la Tierra." }
+        <br/>
+        {localStorage.getItem('lang') === null &&  "You do not put a lot of pollution into the air." }
+        {localStorage.getItem('lang') === 'en' &&  "You do not put a lot of pollution into the air." }
+        {localStorage.getItem('lang') === 'chi' && "您不会对空气造成太多污染。" }
+        {localStorage.getItem('lang') === 'spa' && "No echas mucha contaminación al aire." }
         {this.state.metricChoice ? 
         <div>
-            <br></br>Kilograms of CO2 released per week:
+            <br></br>              
+              {localStorage.getItem('lang') === null &&  "Kilograms of CO2 released per week:" }
+              {localStorage.getItem('lang') === 'en' &&  "Kilograms of CO2 released per week:" }
+              {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳千克：" }
+              {localStorage.getItem('lang') === 'spa' && "Kilogramos de CO2 liberados por semana:" }
             <br></br>
             {numGasMetric.toFixed(2) }
             {localStorage.setItem("carbonNumber",  numGasMetric.toFixed(2) + " kg")}
         </div> :
         <div>
-            <br></br>Pounds of CO2 released per week:
+            <br></br>              
+              {localStorage.getItem('lang') === null &&  "Pounds of CO2 released per week:" }
+              {localStorage.getItem('lang') === 'en' &&  "Pounds of CO2 released per week:" }
+              {localStorage.getItem('lang') === 'chi' && "每周释放的二氧化碳磅：" }
+              {localStorage.getItem('lang') === 'spa' && "Libras de CO2 liberadas por semana:" }
             <br></br>
             {numGasImperial.toFixed(2) }
             {localStorage.setItem("carbonNumber", numGasImperial.toFixed(2) + " lbs")}
@@ -155,7 +215,12 @@ class DataForm extends React.Component {
       <div>
         <div>
           <div class="columns is-centered">
-            <div class="box is-light label has-background-warning">Weekly miles:</div>
+            <div class="box is-light label has-background-warning">
+              {localStorage.getItem('lang') === null && "Weekly miles:"}
+              {localStorage.getItem('lang') === 'en' && "Weekly miles:"}
+              {localStorage.getItem('lang') === 'chi' && "每周里程:"}
+              {localStorage.getItem('lang') === 'spa' && "Millas semanales:"}
+            </div>
             <br></br>
           </div>
           <div class="columns is-centered">
@@ -173,7 +238,12 @@ class DataForm extends React.Component {
           <br></br>
         
           <div class="columns is-centered">
-            <div class="box is-light label has-background-warning">Car MPG:</div>
+            <div class="box is-light label has-background-warning">
+              {localStorage.getItem('lang') === null && "Car MPG:"}
+              {localStorage.getItem('lang') === 'en' && "Car MPG:"}
+              {localStorage.getItem('lang') === 'chi' && "车载MPG:"}
+              {localStorage.getItem('lang') === 'spa' && "MPG de coche:"}
+            </div>
             <br></br>
           </div>
           <div class = "columns is-centered">

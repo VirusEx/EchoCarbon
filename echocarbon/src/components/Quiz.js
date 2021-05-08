@@ -176,7 +176,13 @@ class Quiz extends React.Component {
         
         <div className="">
           <div class="box">
-            <h1 class="title is-1">Quiz</h1>
+            <h1 class="title is-1">
+				
+				{localStorage.getItem('lang') === null && "Quiz"}
+				{localStorage.getItem('lang') === 'en' && "Quiz"}
+				{localStorage.getItem('lang') === 'chi' && "测验"}
+				{localStorage.getItem('lang') === 'spa' && "Examen"}
+			</h1>
           </div>
           <div>
             

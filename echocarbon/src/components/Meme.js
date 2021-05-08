@@ -45,10 +45,20 @@ class Meme extends Component {
     return (
       <div>
         <div className="meme-form">
-          <h1 class="title is-1">Environmental Meme Generator</h1>
+          <h1 class="title is-1">            
+            {localStorage.getItem('lang') === null && "Environmental Meme Generator"}
+            {localStorage.getItem('lang') === 'en' && "Environmental Meme Generator"}
+            {localStorage.getItem('lang') === 'chi' && "环境模因发生器"}
+            {localStorage.getItem('lang') === 'spa' && "Generador de memes ambientales"}
+          </h1>
           <div class="columns is-centered">
             <div class="column is-one-third">
-              <label class="label">Top Text:</label>
+              <label class="label">                
+                {localStorage.getItem('lang') === null && "Top Text:"}
+                {localStorage.getItem('lang') === 'en' && "Top Text:"}
+                {localStorage.getItem('lang') === 'chi' && "顶部文字："}
+                {localStorage.getItem('lang') === 'spa' && "Texto superior:"}
+              </label>
               <input
                 class="input"
                 type="text"
@@ -62,7 +72,12 @@ class Meme extends Component {
 
           <div class="columns is-centered">
             <div class="column is-one-third">
-              <label class="label">Bottom Text:</label>
+              <label class="label">                
+                {localStorage.getItem('lang') === null && "Bottom Text:"}
+                {localStorage.getItem('lang') === 'en' && "Bottom Text:"}
+                {localStorage.getItem('lang') === 'chi' && "底部的文本："}
+                {localStorage.getItem('lang') === 'spa' && "Texto inferior:"}
+              </label>
               <input
                 class="input"
                 type="text"
@@ -76,7 +91,12 @@ class Meme extends Component {
 
           <div class="columns is-centered">
             <div class="column is-one-third">
-              <label class="label">Font Size:</label>
+              <label class="label">                
+                {localStorage.getItem('lang') === null && "Font Size:"}
+                {localStorage.getItem('lang') === 'en' && "Font Size:"}
+                {localStorage.getItem('lang') === 'chi' && "字体大小："}
+                {localStorage.getItem('lang') === 'spa' && "Tamaño de letra:"}
+              </label>
               <input
                 class="input"
                 type="number"
@@ -90,7 +110,12 @@ class Meme extends Component {
             </div>
           </div>
           
-          <div class="button is-warning" onClick={this.handleClick}>Generate!</div>
+          <div class="button is-warning" onClick={this.handleClick}>            
+            {localStorage.getItem('lang') === null && "Generate!"}
+            {localStorage.getItem('lang') === 'en' && "Generate!"}
+            {localStorage.getItem('lang') === 'chi' && "产生！"}
+            {localStorage.getItem('lang') === 'spa' && "¡Generar!"}
+          </div>
         </div>
         <div className="meme">
           <h2

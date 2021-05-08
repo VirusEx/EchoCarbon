@@ -110,17 +110,37 @@ class Map extends React.Component {
         
         <div className="">
           <div class="box">
-            <h1 class="title is-1">Worldwide Map View</h1>
+            <h1 class="title is-1">              
+              {localStorage.getItem('lang') === null && "Worldwide Map View"}
+              {localStorage.getItem('lang') === 'en' && "Worldwide Map View"}
+              {localStorage.getItem('lang') === 'chi' && "全球地图视图"}
+              {localStorage.getItem('lang') === 'spa' && "Vista de mapa mundial"}
+            </h1>
           </div>
           <div class="buttons has-addons">
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 1})}>Map #1 (Carbon Emissions)</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 1})}>                
+                {localStorage.getItem('lang') === null && "Map #1 (Carbon Emissions)"}
+                {localStorage.getItem('lang') === 'en' && "Map #1 (Carbon Emissions)"}
+                {localStorage.getItem('lang') === 'chi' && "地图＃1（碳排放量）"}
+                {localStorage.getItem('lang') === 'spa' && "Mapa # 1 (Emisiones de carbono)"}
+              </button>
             </div>
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 2})}>Map #2 (Coal Consumption)</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 2})}>                
+                {localStorage.getItem('lang') === null && "Map #2 (Coal Consumption)"}
+                {localStorage.getItem('lang') === 'en' && "Map #2 (Coal Consumption)"}
+                {localStorage.getItem('lang') === 'chi' && "地图＃2（煤炭消耗量）"}
+                {localStorage.getItem('lang') === 'spa' && "Mapa # 2 (Consumo de carbón)"}
+              </button>
             </div>
             <div class="column">
-              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 3})}>Map #3 (Top Countries)</button>
+              <button class="button is-medium is-fullwidth is-warning" onClick={() => this.setState({mapChoice: 3})}>                
+                {localStorage.getItem('lang') === null && "Map #3 (Top Countries)"}
+                {localStorage.getItem('lang') === 'en' && "Map #3 (Top Countries)"}
+                {localStorage.getItem('lang') === 'chi' && "地图＃3（主要国家/地区）"}
+                {localStorage.getItem('lang') === 'spa' && "Mapa # 3 (Principales países)"}
+              </button>
             </div>
           </div>
 
@@ -129,7 +149,12 @@ class Map extends React.Component {
               {
                 this.state.mapChoice === 1 &&
                 <div>
-                  <span class="tag is-large is-white">Percentage of Each Country's Carbon Emissions in the World ({'>'} 1%)</span>
+                  <span class="tag is-large is-white">                    
+                    {localStorage.getItem('lang') === null && "Percentage of Each Country's Carbon Emissions in the World (> 1%)"}
+                    {localStorage.getItem('lang') === 'en' && "Percentage of Each Country's Carbon Emissions in the World (> 1%)"}
+                    {localStorage.getItem('lang') === 'chi' && "全世界每个国家的碳排放百分比（> 1％）"}
+                    {localStorage.getItem('lang') === 'spa' && "Porcentaje de las emisiones de carbono de cada país en el mundo (> 1%)"}
+                  </span>
                   <WorldMap color="red" title="" valueSuffix="%" size="xxl" data={this.data} />
                 </div>
               }
@@ -137,7 +162,12 @@ class Map extends React.Component {
               {
                 this.state.mapChoice === 2 &&
                 <div>
-                  <span class="tag is-large is-white">Worldwide Percentage of Coal Consumption ({'>'} 0.5%)</span>
+                  <span class="tag is-large is-white">                    
+                    {localStorage.getItem('lang') === null && "Worldwide Percentage of Coal Consumption (> 0.5%)"}
+                    {localStorage.getItem('lang') === 'en' && "Worldwide Percentage of Coal Consumption (> 0.5%)"}
+                    {localStorage.getItem('lang') === 'chi' && "全球煤炭消费百分比（> 0.5％）"}
+                    {localStorage.getItem('lang') === 'spa' && "Porcentaje mundial de consumo de carbón (> 0,5%)"}
+                  </span>
                   <WorldMap color="black" title="" valueSuffix="%" size="xxl" data={this.data2} />
                 </div>
               }
@@ -145,7 +175,13 @@ class Map extends React.Component {
               {
                 this.state.mapChoice === 3 &&
                 <div>
-                  <span class="tag is-large is-white">Top 20 Environmental Performance Index Countries as of 2020</span>
+                  <span class="tag is-large is-white">
+                    
+                    {localStorage.getItem('lang') === null && "Top 20 Environmental Performance Index Countries as of 2020"}
+                    {localStorage.getItem('lang') === 'en' && "Top 20 Environmental Performance Index Countries as of 2020"}
+                    {localStorage.getItem('lang') === 'chi' && "截至2020年排名前20位的环境绩效指数国家"}
+                    {localStorage.getItem('lang') === 'spa' && "Los 20 principales países con índice de desempeño ambiental a partir de 2020"}
+                  </span>
                   <WorldMap color="green" title="" valueSuffix="EPI" size="xxl" data={this.data3} />
                 </div>
               }
