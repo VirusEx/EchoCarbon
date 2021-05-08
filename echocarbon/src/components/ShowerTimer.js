@@ -106,7 +106,7 @@ function MyTimer({ expiryTimestamp }) {
           <div class="control">
             <button class="button is-info" onClick={() => setshowerMinutes(showerMinutes + 1)}>+</button>
           </div>
-        </div>  
+        </div>
           {/* <button class="button is-info" onClick={(handleDecreaseOnClick)}>-</button>
             <div class="button is-info">{showerMinutes}</div>
           <button class="button is-info" onClick={() => setshowerMinutes(showerMinutes + 1)}>+</button> */}

@@ -38,17 +38,23 @@ class LangSelect extends React.Component {
   render() {
 
       return (
-        <div>
-            <button onClick={()=>this.handleChange('en')}>
-                English
-            </button>
-            <button onClick={()=>this.handleChange('chi')}>
-                官话
-            </button>
-            <button onClick={()=>this.handleChange('spa')}>
-                Español
-            </button>
+        <div class="field has-addons">
+        <div class="control">
+          <button className="button is-outlined" onClick={()=>this.handleChange('en')}>
+            English
+          </button>
         </div>
+        <div class="control">
+          <button className="button is-outlined" onClick={()=>this.handleChange('chi')}>
+            官话
+          </button>
+        </div>
+        <div class="control">
+          <button className="button is-outlined" onClick={()=>this.handleChange('spa')}>
+            Español
+          </button>
+        </div>
+      </div>
       );
     }
 } 

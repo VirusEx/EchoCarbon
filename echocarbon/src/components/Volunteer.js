@@ -98,10 +98,10 @@ class Volunteer extends React.Component {
           <br></br>
           <div class="box">
             <h1 class="title is-3">              
-              {localStorage.getItem('lang') === null && "Available Events"}
-              {localStorage.getItem('lang') === 'en' && "Available Events"}
-              {localStorage.getItem('lang') === 'chi' && "可用活动"}
-              {localStorage.getItem('lang') === 'spa' && "Eventos disponibles"}
+              {localStorage.getItem('lang') === null && "Available Events:"}
+              {localStorage.getItem('lang') === 'en' && "Available Events:"}
+              {localStorage.getItem('lang') === 'chi' && "可用活动:"}
+              {localStorage.getItem('lang') === 'spa' && "Eventos disponibles:"}
             </h1>
           </div>
           <div class="columns is-centered">
