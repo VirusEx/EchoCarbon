@@ -63,7 +63,7 @@ class Questions extends React.Component {
           <h1 class="title is-1">            
             {localStorage.getItem('lang') === null && "Customer Ticket Creator"}
             {localStorage.getItem('lang') === 'en' && "Customer Ticket Creator"}
-            {localStorage.getItem('lang') === 'chi' && "客户票务创建者"}
+            {localStorage.getItem('lang') === 'chi' && "客户票务创建器"}
             {localStorage.getItem('lang') === 'spa' && "Creador de tickets de cliente"}
           </h1>
         </div>

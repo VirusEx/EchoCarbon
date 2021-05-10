@@ -39,7 +39,7 @@ class LinkButtons extends React.Component {
                 <button class="button is-medium is-fullwidth is-success is-outlined">
                   {localStorage.getItem('lang') === null && "House Carbon Footprint Calculator"}
                   {localStorage.getItem('lang') === 'en' && "House Carbon Footprint Calculator"}
-                  {localStorage.getItem('lang') === 'chi' && "房屋碳足迹计算器"}
+                  {localStorage.getItem('lang') === 'chi' && "家庭碳足迹计算器"}
                   {localStorage.getItem('lang') === 'spa' && "Calculadora de Huella de Carbono Casero"}
                 </button>
               </Link>
@@ -70,7 +70,7 @@ class LinkButtons extends React.Component {
                 <button class="button is-medium is-fullwidth is-success is-outlined">
                   {localStorage.getItem('lang') === null && "Environmental Meme Generator"}
                   {localStorage.getItem('lang') === 'en' && "Environmental Meme Generator"}
-                  {localStorage.getItem('lang') === 'chi' && "环境模因发生器"}
+                  {localStorage.getItem('lang') === 'chi' && "环境模因生成器"}
                   {localStorage.getItem('lang') === 'spa' && "Generador de Memes Ambientales"}
                 </button>
               </Link>
@@ -80,7 +80,7 @@ class LinkButtons extends React.Component {
                 <button class="button is-medium is-fullwidth is-success is-outlined">
                   {localStorage.getItem('lang') === null && "Customer Ticket Creator"}
                   {localStorage.getItem('lang') === 'en' && "Customer Ticket Creator"}
-                  {localStorage.getItem('lang') === 'chi' && "客户票务创建者"}
+                  {localStorage.getItem('lang') === 'chi' && "客户票务创建器"}
                   {localStorage.getItem('lang') === 'spa' && "Creador de Tickets Clientelas"}
                 </button>
               </Link>

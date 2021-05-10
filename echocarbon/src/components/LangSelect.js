@@ -46,7 +46,7 @@ class LangSelect extends React.Component {
         </div>
         <div class="control">
           <button className="button is-outlined" onClick={()=>this.handleChange('chi')}>
-            官话
+            中文
           </button>
         </div>
         <div class="control">

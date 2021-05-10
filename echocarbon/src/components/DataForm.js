@@ -130,7 +130,7 @@ class EcoTier extends Component {
           <button class="button has-background-danger" onClick={ () => this.ToggleButton() }>
             {localStorage.getItem('lang') === null &&  "IMPERIAL" }
             {localStorage.getItem('lang') === 'en' &&  "IMPERIAL" }
-            {localStorage.getItem('lang') === 'chi' && "帝王" }
+            {localStorage.getItem('lang') === 'chi' && "英制" }
             {localStorage.getItem('lang') === 'spa' && "IMPERIAL" }
           </button>}
                 
@@ -241,7 +241,7 @@ class DataForm extends React.Component {
             <div class="box is-light label has-background-warning">
               {localStorage.getItem('lang') === null && "Car MPG:"}
               {localStorage.getItem('lang') === 'en' && "Car MPG:"}
-              {localStorage.getItem('lang') === 'chi' && "车载MPG:"}
+              {localStorage.getItem('lang') === 'chi' && "车辆MPG:"}
               {localStorage.getItem('lang') === 'spa' && "MPG de coche:"}
             </div>
             <br></br>

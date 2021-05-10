@@ -25,7 +25,7 @@ export default function Emailer() {
             <div class="title is-1">                
                 {localStorage.getItem('lang') === null && "Carbon Footprint Report & Goal Setter"}
                 {localStorage.getItem('lang') === 'en' && "Carbon Footprint Report & Goal Setter"}
-                {localStorage.getItem('lang') === 'chi' && "碳足迹报告和目标设定者"}
+                {localStorage.getItem('lang') === 'chi' && "碳足迹报告和目标设定"}
                 {localStorage.getItem('lang') === 'spa' && "Informe de huella de carbono y establecimiento de objetivos"}
             </div>
         <form onSubmit={sendEmail}>

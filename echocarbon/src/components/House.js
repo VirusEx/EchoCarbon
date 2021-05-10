@@ -114,7 +114,7 @@ class House extends React.Component {
               <h2 class="title is-4">
                 {localStorage.getItem('lang') === null && "Natural Gas: "+ this.state.gas + " cubic ft per month"}
                 {localStorage.getItem('lang') === 'en' && "Natural Gas: "+ this.state.gas + " cubic ft per month"}
-                {localStorage.getItem('lang') === 'chi' && "天然气: "+ this.state.gas + " 立方英尺每月"}
+                {localStorage.getItem('lang') === 'chi' && "天然气: "+ this.state.gas + " 每月立方英尺"}
                 {localStorage.getItem('lang') === 'spa' && "Gas Natural: "+ this.state.gas + " pies cúbicos por mes"}
               </h2>
               <Slider

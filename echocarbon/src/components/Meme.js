@@ -48,7 +48,7 @@ class Meme extends Component {
           <h1 class="title is-1">            
             {localStorage.getItem('lang') === null && "Environmental Meme Generator"}
             {localStorage.getItem('lang') === 'en' && "Environmental Meme Generator"}
-            {localStorage.getItem('lang') === 'chi' && "环境模因发生器"}
+            {localStorage.getItem('lang') === 'chi' && "环境模因生成器"}
             {localStorage.getItem('lang') === 'spa' && "Generador de memes ambientales"}
           </h1>
           <div class="columns is-centered">
@@ -75,7 +75,7 @@ class Meme extends Component {
               <label class="label">                
                 {localStorage.getItem('lang') === null && "Bottom Text:"}
                 {localStorage.getItem('lang') === 'en' && "Bottom Text:"}
-                {localStorage.getItem('lang') === 'chi' && "底部的文本："}
+                {localStorage.getItem('lang') === 'chi' && "底部文字："}
                 {localStorage.getItem('lang') === 'spa' && "Texto inferior:"}
               </label>
               <input
